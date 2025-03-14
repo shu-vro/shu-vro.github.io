@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Dosis } from "next/font/google";
+import { ReactLenis } from "lenis/react";
 import "./globals.css";
 
 const font = Dosis({
@@ -19,7 +20,9 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" className="dark">
-            <body className={`${font.variable} antialiased`}>{children}</body>
+            <body className={`${font.variable} antialiased`}>
+                <ReactLenis root>{children}</ReactLenis>
+            </body>
         </html>
     );
 }

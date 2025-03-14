@@ -7,10 +7,13 @@ import { RiLinkedinFill } from "react-icons/ri";
 import { BiLogoGmail } from "react-icons/bi";
 import { AnimatedGridPattern } from "./magicui/animated-grid-pattern";
 import { cn } from "@/lib/utils";
+import { Spotlight } from "./ui/spotlight-new";
+import StatsSection from "./stats";
 
 export default function Hero() {
     return (
-        <div className="w-full mx-auto rounded-md  h-screen overflow-hidden">
+        <div className="w-full mx-auto rounded-md overflow-hidden" id="home">
+            <Spotlight />
             <AnimatedGridPattern
                 numSquares={30}
                 maxOpacity={0.1}
@@ -21,30 +24,13 @@ export default function Hero() {
                     "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12"
                 )}
             />
-            {/* <div className="w-full absolute inset-0 h-screen -z-10">
-                <SparklesCore
-                    id="tsparticlesfullpage"
-                    background="transparent"
-                    minSize={0.6}
-                    maxSize={1.4}
-                    particleDensity={100}
-                    className="w-full h-full"
-                    particleColor="#FFFFFF"
-                />
-            </div> */}
-            {/* <Vortex
-                backgroundColor="black"
-                rangeY={800}
-                particleCount={500}
-                baseHue={120}
-                rangeSpeed={0.5}
-                className="flex items-center justify-between flex-row px-2 md:px-10  py-4 w-full h-full"> */}
-            <div className="h-screen flex items-center justify-between flex-row max-md:flex-col px-2 md:px-10 py-4 w-full">
-                <div className="w-full z-10">
-                    <h1 className="w-full text-[clamp(3.75rem,5vw,5.813rem)] font-bold flex flex-row justify-center gap-6">
-                        <span>Hi, I'm</span> <SparklesText text="Shirshen" />
+            <div className="h-[calc(100vh-60px-126px)] max-md:h-auto flex items-center justify-start max-md:items-start flex-row w-full">
+                <div className="w-full z-10 px-12 max-md:mt-12">
+                    <h1 className="w-full text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold flex flex-row justify-start gap-6 max-[400px]:flex-col max-[400px]:gap-0">
+                        <span>Hi, I'm</span>
+                        <SparklesText text="Shirshen" />
                     </h1>
-                    <h1 className="text-[clamp(3.75rem,5vw+3rem,5.813rem)] font-bold tracking-tighter flex flex-row justify-center gap-6">
+                    <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter flex flex-row justify-start max-md:flex-col gap-6 max-md:gap-0">
                         <AuroraText
                             colors={[
                                 "#00FF87",
@@ -68,12 +54,12 @@ export default function Hero() {
                             Developer
                         </AuroraText>
                     </h1>
-                    <p className="font-bold text-center">
+                    <p className="font-bold text-start text-xl my-6">
                         I'm a full stack developer with a passion for creating{" "}
                         <br />
                         beautiful and functional web applications.
                     </p>
-                    <div className="flex flex-row gap-2 mt-4 justify-center">
+                    <div className="flex flex-row gap-2 mt-4 justify-start">
                         <ButtonFancy>Download CV</ButtonFancy>
                         <a
                             href="https://github.com/shu-vro"
@@ -108,6 +94,7 @@ export default function Hero() {
                     </div>
                 </div>
             </div>
+            <StatsSection />
             {/* </Vortex> */}
         </div>
     );
