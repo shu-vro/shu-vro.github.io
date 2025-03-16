@@ -1,7 +1,8 @@
 "use client";
 import React from "react";
 import { LayoutGrid } from "./ui/layout-grid";
-import ExpandableCardDemo from "./expandable-card-demo-grid";
+// import ExpandableCardDemo from "./expandable-card-demo-grid";
+import ExpandableCardDemo from "./expandable-card-demo-list";
 
 export default function Projects() {
     return (

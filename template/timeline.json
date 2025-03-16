@@ -1,0 +1,81 @@
+[
+    {
+        "title": "2023",
+        "description": "Earned a place in the Computer Science and Engineering (CSE) department at Rajshahi University of Engineering & Technology (RUET), marking a significant milestone in my academic journey",
+        "specs": [
+            "Secured admission through rigorous preparation and competitive exams",
+            "Stepped into a dynamic learning environment focused on computing and innovation",
+            "Strengthened problem-solving and analytical thinking skills",
+            "Gained exposure to core computer science concepts and engineering principles",
+            "Began collaborating with peers on projects and technical challenges",
+            "Laid the foundation for advanced studies in algorithms, software development, and AI",
+            "Opened doors to research, internships, and career opportunities in the tech industry",
+            "Started exploring artificial intelligence and machine learning"
+        ],
+        "tags": ["#RUET", "#CSE", "#EngineeringLife", "#AIAndML"]
+    },
+    {
+        "title": "2022",
+        "description": "Achieved a CGPA of 5.00 out of 5.00, demonstrating strong academic performance",
+        "specs": [
+            "Strengthened problem-solving and analytical thinking skills",
+            "Built a disciplined and goal-oriented mindset",
+            "Laid a solid foundation for higher education in computer science",
+            "Gained in-depth knowledge of mathematics, physics, and programming concepts",
+            "Developed a keen interest in technology and innovation",
+            "Enhanced time management and self-learning abilities",
+            "Prepared for competitive exams and future academic challenges"
+        ],
+        "tags": ["#Mathematics", "#Physics", "#IT", "#Chemistry"]
+    },
+    {
+        "title": "2021",
+        "description": "Started actively developing web projects while diving into competitive programming",
+        "specs": [
+            "Built real-world projects, applying frontend and backend development skills",
+            "Learned and practiced Next.js, making it a core part of my tech stack",
+            "Gained experience with Vue, PHP, and MySQL, with MySQL remaining in use",
+            "Improved problem-solving abilities through competitive programming",
+            "Developed a deeper understanding of full-stack development principles",
+            "Built optimized and scalable web applications with best practices",
+            "Gained experience working with APIs, authentication, and databases",
+            "Learned how to debug efficiently and write cleaner, maintainable code",
+            "Improved coding speed and accuracy through regular competitive programming challenges",
+            "Started exploring advanced JavaScript concepts and performance optimization techniques",
+            "Strengthened logical reasoning and structured thinking through algorithmic problem-solving"
+        ],
+        "tags": [
+            "#WebDevelopment",
+            "#NextJS",
+            "#FullStack",
+            "#CompetitiveProgramming",
+            "#ProblemSolving",
+            "#AlgorithmDesign",
+            "#MySQL",
+            "#FrontendDevelopment",
+            "#BackendDevelopment",
+            "#APIs",
+            "#CleanCode",
+            "#ScalableApps",
+            "#Debugging",
+            "#CodeOptimization",
+            "#JavaScript",
+            "#ReactJS",
+            "#ProgrammingChallenges",
+            "#DatabaseManagement",
+            "#CSFundamentals"
+        ]
+    },
+    {
+        "title": "Early 2020",
+        "description": "Began my journey as a web developer, turning ideas into interactive digital experiences",
+        "specs": [
+            "Explored HTML, CSS, and JavaScript fundamentals",
+            "Built my first projects, enhancing problem-solving skills",
+            "Developed a passion for creating dynamic and user-friendly web applications",
+            "Learned modern frameworks like React.js and Next.js",
+            "Gained experience in backend development with Node.js and databases"
+        ],
+        "tags": ["#Programming", "#Web", "#React", "#Problem Solving"]
+    }
+]

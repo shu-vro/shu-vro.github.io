@@ -1,12 +1,39 @@
 "use client";
 
+import { ScrollCallback } from "lenis";
 import { useLenis } from "lenis/react";
-import React from "react";
+import React, { useEffect, useState } from "react";
 
 export default function Navbar() {
     const lenis = useLenis();
+    const [showNavbar, setShowNavbar] = useState(true);
+
+    useEffect(() => {
+        if (!lenis) return;
+        let lastScroll = 0;
+        const onScroll: ScrollCallback = ({ scroll }) => {
+            // Compare current scroll with previous scroll position to determine direction
+            if (scroll > lastScroll + 5) {
+                // Scrolled down a bit
+                setShowNavbar(false);
+            } else if (scroll < lastScroll - 5) {
+                // Scrolled up a bit
+                setShowNavbar(true);
+            }
+            lastScroll = scroll;
+        };
+
+        lenis.on("scroll", onScroll);
+        return () => {
+            lenis.off("scroll", onScroll);
+        };
+    }, [lenis]);
+
     return (
-        <nav>
+        <nav
+            className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 bg-black/20 backdrop-blur-md ${
+                showNavbar ? "translate-y-0" : "-translate-y-full"
+            }`}>
             <div className="max-w-7xl mx-auto py-4 px-4 md:px-8 lg:px-10 h-15">
                 <div className="flex justify-between items-center">
                     <div>
