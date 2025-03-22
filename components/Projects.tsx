@@ -1,12 +1,10 @@
 "use client";
 import React from "react";
-import { LayoutGrid } from "./ui/layout-grid";
-// import ExpandableCardDemo from "./expandable-card-demo-grid";
-import ExpandableCardDemo from "./expandable-card-demo-list";
+import Chip from "./ui/custom-chip";
 
 export default function Projects() {
     return (
-        <div className="h-screen py-20 w-full" id="projects">
+        <div className="min-h-screen py-20 w-full" id="projects">
             <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
                 <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
                     Projects That I Have Done
@@ -17,97 +15,73 @@ export default function Projects() {
                 </p>
             </div>
             {/* <LayoutGrid cards={cards} /> */}
-            <ExpandableCardDemo />
+            <div className="max-w-7xl mx-auto">
+                <ProjectShowcase
+                    id={1}
+                    year="2021"
+                    title="Startup 1"
+                    description="A startup landing page template for a SaaS business."
+                    tags={["React", "Tailwind CSS", "Framer Motion"]}
+                    imageUrl="https://aceternity.com/cdn-cgi/image/width=640/https://assets.aceternity.com/templates/startup-1.webp"
+                    projectLink="https://aceternity.com/templates/startup-1"
+                />
+            </div>
         </div>
     );
 }
 
-// const SkeletonOne = () => {
-//     return (
-//         <div>
-//             <p className="font-bold md:text-4xl text-xl text-white">
-//                 House in the woods
-//             </p>
-//             <p className="font-normal text-base text-white"></p>
-//             <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-//                 A serene and tranquil retreat, this house in the woods offers a
-//                 peaceful escape from the hustle and bustle of city life.
-//             </p>
-//         </div>
-//     );
-// };
+interface ProjectShowcaseProps {
+    year: string;
+    title: string;
+    description: string;
+    tags: string[];
+    imageUrl: string;
+    projectLink: string;
+    id: number;
+}
 
-// const SkeletonTwo = () => {
-//     return (
-//         <div>
-//             <p className="font-bold md:text-4xl text-xl text-white">
-//                 House above the clouds
-//             </p>
-//             <p className="font-normal text-base text-white"></p>
-//             <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-//                 Perched high above the world, this house offers breathtaking
-//                 views and a unique living experience. It&apos;s a place where
-//                 the sky meets home, and tranquility is a way of life.
-//             </p>
-//         </div>
-//     );
-// };
-// const SkeletonThree = () => {
-//     return (
-//         <div>
-//             <p className="font-bold md:text-4xl text-xl text-white">
-//                 Greens all over
-//             </p>
-//             <p className="font-normal text-base text-white"></p>
-//             <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-//                 A house surrounded by greenery and nature&apos;s beauty.
-//                 It&apos;s the perfect place to relax, unwind, and enjoy life.
-//             </p>
-//         </div>
-//     );
-// };
-// const SkeletonFour = () => {
-//     return (
-//         <div>
-//             <p className="font-bold md:text-4xl text-xl text-white">
-//                 Rivers are serene
-//             </p>
-//             <p className="font-normal text-base text-white"></p>
-//             <p className="font-normal text-base my-4 max-w-lg text-neutral-200">
-//                 A house by the river is a place of peace and tranquility.
-//                 It&apos;s the perfect place to relax, unwind, and enjoy life.
-//             </p>
-//         </div>
-//     );
-// };
-
-// const cards = [
-//     {
-//         id: 1,
-//         content: <SkeletonOne />,
-//         className: "md:col-span-2",
-//         thumbnail:
-//             "https://images.unsplash.com/photo-1476231682828-37e571bc172f?q=80&w=3474&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-//     },
-//     {
-//         id: 2,
-//         content: <SkeletonTwo />,
-//         className: "col-span-1",
-//         thumbnail:
-//             "https://images.unsplash.com/photo-1464457312035-3d7d0e0c058e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-//     },
-//     {
-//         id: 3,
-//         content: <SkeletonThree />,
-//         className: "col-span-1",
-//         thumbnail:
-//             "https://images.unsplash.com/photo-1588880331179-bc9b93a8cb5e?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-//     },
-//     {
-//         id: 4,
-//         content: <SkeletonFour />,
-//         className: "md:col-span-2",
-//         thumbnail:
-//             "https://images.unsplash.com/photo-1475070929565-c985b496cb9f?q=80&w=3540&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D",
-//     },
-// ];
+const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
+    year,
+    title,
+    description,
+    tags,
+    imageUrl,
+    projectLink,
+}) => {
+    // const className = "before"
+    return (
+        <div className="flex flex-col md:flex-row items-center p-6 md:p-12 rounded-2xl shadow-lg">
+            <div className="w-full md:w-1/2 lg:w-2/5 space-y-4">
+                <div className="text-md uppercase tracking-wide text-gray-400 flex flex-row justify-start items-center gap-2">
+                    <span>Creative Development</span>{" "}
+                    <div className="w-2 h-2 rounded-full bg-red-500"></div>{" "}
+                    <span>{year}</span>
+                </div>
+                <h2 className="text-7xl font-extralight">{title}</h2>
+                <p className="text-gray-400">{description}</p>
+                <div className="flex space-x-2">
+                    {tags.map((tag, index) => (
+                        <Chip key={index}>#{tag}</Chip>
+                    ))}
+                </div>
+                <a
+                    href={projectLink}
+                    className="inline-block bg-white text-black px-5 py-2 rounded-lg font-medium hover:bg-gray-200 transition">
+                    View Project →
+                </a>
+                <a
+                    href={projectLink}
+                    className="ml-2 inline-block bg-white text-black px-5 py-2 rounded-lg font-medium hover:bg-gray-200 transition">
+                    Github Link →
+                </a>
+            </div>
+            <div className="w-full md:w-1/2 lg:w-3/5 flex justify-center mt-6 md:mt-0">
+                <img
+                    src={imageUrl}
+                    alt={title}
+                    className="rounded-lg shadow-lg w-full transition-all brightness-100 hover:brightness-50"
+                />
+            </div>
+        </div>
+    );
+};

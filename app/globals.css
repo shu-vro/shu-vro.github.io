@@ -90,10 +90,9 @@
     }
 }
 
-* {
-    cursor: none !important;
-    /* border: inset 1px red; */
-}
+/* * {
+    border: inset 1px red;
+} */
 
 @keyframes marquee {
     from {

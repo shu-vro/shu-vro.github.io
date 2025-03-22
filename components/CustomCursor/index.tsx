@@ -14,13 +14,11 @@ export default function CustomCursor() {
         }
         const mouseMove = (e: MouseEvent) => {
             const { clientX, clientY } = e;
-            const mouseX = clientX - (dotRef.current?.clientWidth || 0) / 2;
-            const mouseY = clientY - (dotRef.current?.clientHeight || 0) / 2;
 
             dotRef.current?.animate(
                 {
-                    left: mouseX + "px",
-                    top: mouseY + "px",
+                    left: clientX + "px",
+                    top: clientY + "px",
                 },
                 {
                     duration: 0,
@@ -29,8 +27,8 @@ export default function CustomCursor() {
             );
             circleRef.current?.animate(
                 {
-                    left: mouseX + "px",
-                    top: mouseY + "px",
+                    left: clientX + "px",
+                    top: clientY + "px",
                 },
                 {
                     duration: 1000,
@@ -41,13 +39,14 @@ export default function CustomCursor() {
             // detect if there is a link or button underneat the cursor
             const isLink = (e.target as HTMLElement).closest("a");
             const isButton = (e.target as HTMLElement).closest("button");
-            if (isLink || isButton) {
+            const isImage = (e.target as HTMLElement).closest("img");
+            if (isLink || isButton || isImage) {
                 dotRef.current?.classList.add(styles["cursor-dot--hover"]);
                 circleRef.current?.classList.add(
                     styles["cursor-circle--hover"]
                 );
             }
-            if (!isLink && !isButton) {
+            if (!isLink && !isButton && !isImage) {
                 dotRef.current?.classList.remove(styles["cursor-dot--hover"]);
                 circleRef.current?.classList.remove(
                     styles["cursor-circle--hover"]

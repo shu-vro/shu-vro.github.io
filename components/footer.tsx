@@ -1,6 +1,7 @@
 import Link from "next/link";
 import { RiGithubFill } from "react-icons/ri";
 import { FaKaggle } from "react-icons/fa";
+import Logo from "./Logo";
 
 const links = [
     {
@@ -33,8 +34,8 @@ export default function FooterSection() {
     return (
         <footer className="py-16 md:py-32">
             <div className="mx-auto max-w-5xl px-6">
-                <div className="text-center text-2xl uppercase underline">
-                    Shirshen
+                <div className="text-center">
+                    <Logo />
                 </div>
                 <div className="my-8 flex flex-wrap justify-center gap-6 text-sm">
                     {links.map((link, index) => (

@@ -5,6 +5,7 @@ import { ReactLenis } from "lenis/react";
 import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
 import LoadingAnimation from "@/components/LoadingAnimation";
+import { cn } from "@/lib/utils";
 
 const font = Dosis({
     variable: "--font-geist-sans",
@@ -63,7 +64,12 @@ export default function RootLayout({
     children: React.ReactNode;
 }>) {
     return (
-        <html lang="en" className="dark">
+        <html
+            lang="en"
+            className={cn(
+                "dark",
+                process.env.NODE_ENV !== "development" && "**:cursor-none!"
+            )}>
             <body
                 className={`${font.variable} ${localFonts.variable} antialiased`}>
                 <ReactLenis root>{children}</ReactLenis>

@@ -3,6 +3,7 @@
 import { ScrollCallback } from "lenis";
 import { useLenis } from "lenis/react";
 import React, { useEffect, useState } from "react";
+import Logo from "./Logo";
 
 export default function Navbar() {
     const lenis = useLenis();
@@ -42,9 +43,8 @@ export default function Navbar() {
                             onClick={() => {
                                 if (!lenis) return;
                                 lenis.scrollTo(0);
-                            }}
-                            className="text-lg font-bold text-neutral-900 dark:text-neutral-100 uppercase underline">
-                            Shirshen
+                            }}>
+                            <Logo />
                         </a>
                     </div>
                     <div>

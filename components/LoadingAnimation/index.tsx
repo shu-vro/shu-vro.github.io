@@ -40,10 +40,10 @@ export default function LoadingAnimation() {
 
             {!deleteText && (
                 <div className="w-full h-full flex justify-center items-center absolute top-0 left-0 z-999999 text-[#222020] font-[family-name:var(--font-butler)]">
-                    <div className="h-30 w-full text-center overflow-hidden">
+                    <div className="h-32 w-full text-center overflow-hidden">
                         <div
                             className={cn(
-                                "h-30 w-full text-center duration-1000",
+                                "h-32 w-full text-center duration-1000",
                                 showText && "animate-fadeOut"
                             )}>
                             <MorphingText
