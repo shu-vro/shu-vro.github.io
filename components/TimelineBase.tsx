@@ -9,9 +9,9 @@ export default function TimelineBase() {
         title: item.title,
         content: (
             <div>
-                <p className="text-neutral-800 dark:text-neutral-200 text-lg md:text-2xl font-normal mb-8">
+                <h4 className="text-neutral-800 dark:text-neutral-200 text-xl md:text-3xl font-normal mb-8">
                     {item.description}
-                </p>
+                </h4>
                 <ul className="list-disc list-inside space-y-1 text-neutral-700 dark:text-neutral-300 mb-8">
                     {item.specs.map((spec) => (
                         <li key={spec}>{spec}</li>

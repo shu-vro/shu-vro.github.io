@@ -31,7 +31,7 @@ export default function Navbar() {
 
     return (
         <nav
-            className={`fixed top-0 left-0 right-0 z-50 transition-transform duration-300 bg-black/20 backdrop-blur-md ${
+            className={`sticky top-0 left-0 right-0 z-50 transition-transform duration-300 bg-black/20 backdrop-blur-md ${
                 showNavbar ? "translate-y-0" : "-translate-y-full"
             }`}>
             <div className="max-w-7xl mx-auto py-4 px-4 md:px-8 lg:px-10 h-15">
@@ -43,7 +43,7 @@ export default function Navbar() {
                                 if (!lenis) return;
                                 lenis.scrollTo(0);
                             }}
-                            className="text-lg font-bold text-neutral-900 dark:text-neutral-100">
+                            className="text-lg font-bold text-neutral-900 dark:text-neutral-100 uppercase underline">
                             Shirshen
                         </a>
                     </div>

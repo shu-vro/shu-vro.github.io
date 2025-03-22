@@ -1,11 +1,55 @@
 import type { Metadata } from "next";
 import { Dosis } from "next/font/google";
+import localFont from "next/font/local";
 import { ReactLenis } from "lenis/react";
 import "./globals.css";
+import CustomCursor from "@/components/CustomCursor";
+import LoadingAnimation from "@/components/LoadingAnimation";
 
 const font = Dosis({
     variable: "--font-geist-sans",
     subsets: ["latin"],
+});
+
+const localFonts = localFont({
+    variable: "--font-butler",
+    src: [
+        {
+            path: "./fonts/butler/Butler/Butler_Ultra_Light.otf",
+            weight: "100",
+            style: "normal",
+        },
+        {
+            path: "./fonts/butler/Butler/Butler_Light.otf",
+            weight: "300",
+            style: "normal",
+        },
+        {
+            path: "./fonts/butler/Butler/Butler_Regular.otf",
+            weight: "400",
+            style: "normal",
+        },
+        {
+            path: "./fonts/butler/Butler/Butler_Medium.otf",
+            weight: "500",
+            style: "normal",
+        },
+        {
+            path: "./fonts/butler/Butler/Butler_Bold.otf",
+            weight: "600",
+            style: "normal",
+        },
+        {
+            path: "./fonts/butler/Butler/Butler_Black.otf",
+            weight: "700",
+            style: "normal",
+        },
+        {
+            path: "./fonts/butler/Butler/Butler_ExtraBold.otf",
+            weight: "900",
+            style: "normal",
+        },
+    ],
 });
 
 export const metadata: Metadata = {
@@ -20,8 +64,11 @@ export default function RootLayout({
 }>) {
     return (
         <html lang="en" className="dark">
-            <body className={`${font.variable} antialiased`}>
+            <body
+                className={`${font.variable} ${localFonts.variable} antialiased`}>
                 <ReactLenis root>{children}</ReactLenis>
+                <CustomCursor />
+                <LoadingAnimation />
             </body>
         </html>
     );
