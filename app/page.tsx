@@ -1,4 +1,3 @@
-import FooterSection from "@/components/footer";
 import Hero from "@/components/Hero";
 import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
@@ -14,7 +13,6 @@ export default function Home() {
             <TimelineBase />
             <Projects />
             <SkillsSection />
-            <FooterSection />
         </div>
     );
 }

@@ -1,6 +1,7 @@
 "use client";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { motion } from "motion/react";
+import { cn } from "@/lib/utils";
 
 type SpotlightProps = {
     gradientFirst?: string;
@@ -25,6 +26,13 @@ export const Spotlight = ({
     duration = 7,
     xOffset = 100,
 }: SpotlightProps = {}) => {
+    const [mobile, setMobile] = useState(false);
+    useEffect(() => {
+        if ("ontouchstart" in window) {
+            setMobile(true);
+        }
+    }, []);
+
     return (
         <motion.div
             initial={{
@@ -36,7 +44,10 @@ export const Spotlight = ({
             transition={{
                 duration: 1.5,
             }}
-            className="pointer-events-none absolute inset-0 h-full w-full overflow-hidden">
+            className={cn(
+                "pointer-events-none absolute inset-0 h-full w-full overflow-hidden",
+                mobile && "hidden"
+            )}>
             <motion.div
                 animate={{
                     x: [0, xOffset, 0],

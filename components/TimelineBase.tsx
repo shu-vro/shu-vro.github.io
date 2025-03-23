@@ -9,7 +9,7 @@ export default function TimelineBase() {
         title: item.title,
         content: (
             <div>
-                <h4 className="text-neutral-800 dark:text-neutral-200 text-xl md:text-4xl font-extralight mb-8">
+                <h4 className="text-neutral-800 dark:text-neutral-200 text-xl max-md:text-2xl md:text-4xl font-extralight mb-8">
                     {item.description}
                 </h4>
                 <ul className="list-disc list-inside space-y-1 text-neutral-700 dark:text-neutral-300 mb-8">

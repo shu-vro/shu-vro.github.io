@@ -26,14 +26,14 @@ export default function Hero() {
                 )}
             />
             <div className="h-[calc(100vh-60px-126px)] max-md:h-auto flex items-center justify-start max-md:items-start flex-row w-full">
-                <div className="w-full z-10 px-12 max-md:mt-12">
+                <div className="w-full px-12 max-md:mt-12">
                     <BoxReveal delay={4.5}>
                         <h1 className="w-full text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold flex flex-row justify-start gap-6 max-[400px]:flex-col max-[400px]:gap-0">
                             <span>Hi, I'm</span>
                             <SparklesText text="Shirshen" />
                         </h1>
                     </BoxReveal>
-                    <BoxReveal delay={4.8}>
+                    <BoxReveal delay={4.75}>
                         <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter flex flex-row justify-start items-start max-md:flex-col gap-6 max-md:gap-0">
                             <AuroraText
                                 colors={[
@@ -60,21 +60,21 @@ export default function Hero() {
                         </h1>
                     </BoxReveal>
                     <div className="font-bold text-start text-xl my-6">
-                        <BoxReveal delay={5}>
+                        <BoxReveal delay={4.85}>
                             <span>
                                 I'm a full stack developer with a passion for
                                 creating{" "}
                             </span>
                         </BoxReveal>
                         {/* <br /> */}
-                        <BoxReveal delay={5.25}>
+                        <BoxReveal delay={5.1}>
                             <span>
                                 beautiful and functional web applications.{" "}
                             </span>
                         </BoxReveal>
                     </div>
 
-                    <BoxReveal delay={5.5}>
+                    <BoxReveal delay={5.25}>
                         <div className="flex flex-row gap-2 mt-4 justify-start">
                             <ButtonFancy>Download CV</ButtonFancy>
                             <a

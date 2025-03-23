@@ -1,0 +1,58 @@
+[
+    {
+        "year": "2025",
+        "title": "UiBuild",
+        "description": "A website that can build websites",
+        "tags": [
+            "react",
+            "nextjs",
+            "tailwind css",
+            "framer motion",
+            "styled components",
+            "radixUI",
+            "heroUI",
+            "craft.js",
+            "lucide",
+            "lenis"
+        ],
+        "imageUrl": "/project-images/uibuild.jpg",
+        "projectLink": "https://github.com/shu-vro/uibuild",
+        "ghLink": "https://github.com/shu-vro/uibuild"
+    },
+    {
+        "year": "2024",
+        "title": "RODE Solver",
+        "description": "An application to solve ordinary differential equations integrated with LLM. Also includes functionality for differential and integral calculus solve. ",
+        "tags": [
+            "ODE Solver",
+            "LLM",
+            "Generative AI",
+            "Math Computation",
+            "Scientific Computing",
+            "Differentiation",
+            "Integration",
+            "Calculus"
+        ],
+        "imageUrl": "/project-images/rode.jpg",
+        "projectLink": "https://rode-solver.vercel.app/",
+        "ghLink": "https://github.com/shu-vro/RODE-Solver"
+    },
+    {
+        "year": "2021",
+        "title": "Complete portfolio website",
+        "description": "\"COMPLETE-PORTFOLIO-WEBSITE\" is a comprehensive project for creating a portfolio website, utilizing HTML, CSS, and JavaScript. It showcases various web development techniques to build a visually appealing and functional personal portfolio.",
+        "tags": [
+            "ODE Solver",
+            "LLM",
+            "Generative AI",
+            "Math Computation",
+            "Scientific Computing",
+            "Differentiation",
+            "Integration",
+            "Calculus"
+        ],
+        "imageUrl": "/project-images/complete-portfolio.jpg",
+        "projectLink": "https://shu-vro.github.io/COMPLETE-PORTFOLIO-WEBSITE/",
+        "ghLink": "https://github.com/shu-vro/COMPLETE-PORTFOLIO-WEBSITE"
+    }
+]

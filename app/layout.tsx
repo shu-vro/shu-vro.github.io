@@ -6,6 +6,7 @@ import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
 import LoadingAnimation from "@/components/LoadingAnimation";
 import { cn } from "@/lib/utils";
+import FooterSection from "@/components/footer";
 
 const font = Dosis({
     variable: "--font-geist-sans",
@@ -70,9 +71,22 @@ export default function RootLayout({
                 "dark",
                 process.env.NODE_ENV !== "development" && "**:cursor-none!"
             )}>
+            {process.env.NODE_ENV === "development" && (
+                <head>
+                    <script
+                        crossOrigin="anonymous"
+                        src="https://unpkg.com/react-scan/dist/auto.global.js"
+                    />
+                    {/* rest of your scripts go under */}
+                </head>
+            )}
             <body
                 className={`${font.variable} ${localFonts.variable} antialiased`}>
-                <ReactLenis root>{children}</ReactLenis>
+                <ReactLenis root>
+                    {children}
+
+                    <FooterSection />
+                </ReactLenis>
                 <CustomCursor />
                 <LoadingAnimation />
             </body>

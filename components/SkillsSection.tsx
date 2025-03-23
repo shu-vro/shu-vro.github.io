@@ -187,7 +187,9 @@ export default function SkillsSection() {
     return (
         <>
             <div className="max-w-7xl mx-auto py-20 pb-10 px-4 md:px-8 lg:px-10">
-                <h2 className="text-lg md:text-4xl mb-4 text-black dark:text-white max-w-4xl">
+                <h2
+                    className="text-4xl mb-4 text-black dark:text-white max-w-4xl"
+                    tabIndex={0}>
                     My Tech Stack
                 </h2>
                 <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-md">
@@ -208,7 +210,7 @@ export default function SkillsSection() {
                                     <img
                                         src={item.url}
                                         alt={item.name}
-                                        className="w-16"
+                                        className="w-16 max-md:w-10"
                                     />
                                 }
                             />
@@ -224,7 +226,7 @@ export default function SkillsSection() {
                                 <img
                                     src={item.url}
                                     alt={item.name}
-                                    className="w-16"
+                                    className="w-16 max-md:w-10"
                                 />
                             }
                         />
@@ -239,7 +241,7 @@ export default function SkillsSection() {
                                 <img
                                     src={item.url}
                                     alt={item.name}
-                                    className="w-16"
+                                    className="w-16 max-md:w-10"
                                 />
                             }
                         />

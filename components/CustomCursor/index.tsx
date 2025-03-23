@@ -39,14 +39,13 @@ export default function CustomCursor() {
             // detect if there is a link or button underneat the cursor
             const isLink = (e.target as HTMLElement).closest("a");
             const isButton = (e.target as HTMLElement).closest("button");
-            const isImage = (e.target as HTMLElement).closest("img");
-            if (isLink || isButton || isImage) {
+            if (isLink || isButton) {
                 dotRef.current?.classList.add(styles["cursor-dot--hover"]);
                 circleRef.current?.classList.add(
                     styles["cursor-circle--hover"]
                 );
             }
-            if (!isLink && !isButton && !isImage) {
+            if (!isLink && !isButton) {
                 dotRef.current?.classList.remove(styles["cursor-dot--hover"]);
                 circleRef.current?.classList.remove(
                     styles["cursor-circle--hover"]

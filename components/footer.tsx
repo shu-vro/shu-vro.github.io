@@ -5,28 +5,20 @@ import Logo from "./Logo";
 
 const links = [
     {
-        title: "Features",
-        href: "#",
+        title: "HOME",
+        href: "#home",
     },
     {
-        title: "Solution",
-        href: "#",
+        title: "ABOUT",
+        href: "#about",
     },
     {
-        title: "Customers",
-        href: "#",
+        title: "PROJECTS",
+        href: "#projects",
     },
     {
-        title: "Pricing",
-        href: "#",
-    },
-    {
-        title: "Help",
-        href: "#",
-    },
-    {
-        title: "About",
-        href: "#",
+        title: "CONTACT",
+        href: "#contact",
     },
 ];
 
