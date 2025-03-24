@@ -98,6 +98,13 @@ export default function Navbar() {
                             <li>
                                 <a
                                     href="#"
+                                    onClick={(e) => {
+                                        e.preventDefault();
+                                        if (!lenis) return;
+                                        lenis.scrollTo("#contact", {
+                                            duration: 2,
+                                        });
+                                    }}
                                     className="text-neutral-900 dark:text-neutral-100">
                                     Contact
                                 </a>

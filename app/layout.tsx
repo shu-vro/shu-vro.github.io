@@ -7,6 +7,7 @@ import CustomCursor from "@/components/CustomCursor";
 import LoadingAnimation from "@/components/LoadingAnimation";
 import { cn } from "@/lib/utils";
 import FooterSection from "@/components/footer";
+import SparklesBackground from "@/components/SparklesBackground";
 
 const font = Dosis({
     variable: "--font-geist-sans",
@@ -81,7 +82,8 @@ export default function RootLayout({
                 )}
             </head>
             <body
-                className={`${font.variable} ${localFonts.variable} antialiased`}>
+                className={`${font.variable} ${localFonts.variable} antialiased relative min-h-full`}>
+                <SparklesBackground />
                 <ReactLenis root>
                     {children}
 

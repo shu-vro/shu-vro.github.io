@@ -1,7 +1,6 @@
 import React from "react";
 import ButtonFancy from "./ui/ButtonFancy";
 import { AuroraText } from "./magicui/aurora-text";
-import { SparklesText } from "./magicui/sparkles-text";
 import { IoLogoGithub } from "react-icons/io5";
 import { RiLinkedinFill } from "react-icons/ri";
 import { BiLogoGmail } from "react-icons/bi";
@@ -13,7 +12,7 @@ import { BoxReveal } from "./magicui/box-reveal";
 
 export default function Hero() {
     return (
-        <div className="w-full mx-auto rounded-md overflow-hidden" id="home">
+        <div className="relative w-full h-full mx-auto rounded-md" id="home">
             <Spotlight />
             <AnimatedGridPattern
                 numSquares={30}
@@ -22,19 +21,20 @@ export default function Hero() {
                 repeatDelay={1}
                 className={cn(
                     "[mask-image:radial-gradient(700px_circle_at_center,white,transparent)]",
-                    "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12"
+                    "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12 absolute"
                 )}
             />
             <div className="h-[calc(100vh-60px-126px)] max-md:h-auto flex items-center justify-start max-md:items-start flex-row w-full max-w-6xl mx-auto">
                 <div className="w-full px-12 max-md:mt-12">
                     <BoxReveal delay={4.5}>
-                        <h1 className="w-full text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-bold flex flex-row justify-start gap-6 max-[400px]:flex-col max-[400px]:gap-0">
+                        <h1 className="w-full text-4xl md:text-6xl lg:text-7xl font-bold flex flex-row justify-start gap-6 max-[400px]:flex-col max-[400px]:gap-0">
                             <span>Hi, I'm</span>
-                            <SparklesText text="Shirshen" />
+                            <span>Shirshen</span>
+                            {/* <SparklesText text="Shirshen" /> */}
                         </h1>
                     </BoxReveal>
                     <BoxReveal delay={4.75}>
-                        <h1 className="text-4xl sm:text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter flex flex-row justify-start items-start max-md:flex-col gap-6 max-md:gap-0">
+                        <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter flex flex-row justify-start items-start max-md:flex-col gap-6 max-md:gap-0">
                             <AuroraText
                                 colors={[
                                     "#00FF87",
@@ -98,7 +98,7 @@ export default function Hero() {
                                 </ButtonFancy>
                             </a>
                             <a
-                                href="mail:official.shirshen@gmail.com"
+                                href="mailto:official.shirshen@gmail.com"
                                 target="_blank"
                                 rel="noopener noreferrer"
                                 className="text-2xl">

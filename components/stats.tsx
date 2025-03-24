@@ -30,7 +30,7 @@ export default function StatsSection() {
             animate={mainControls}
             transition={{
                 duration: 0.5,
-                delay: 4.75,
+                delay: 5,
             }}>
             <div className="mx-auto max-w-6xl my-0 px-6 max-md:my-8">
                 <div className="grid gap-3 *:text-start sm:grid-cols-3">
