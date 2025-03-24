@@ -71,15 +71,15 @@ export default function RootLayout({
                 "dark",
                 process.env.NODE_ENV !== "development" && "**:cursor-none!"
             )}>
-            {process.env.NODE_ENV === "development" && (
-                <head>
+            <head>
+                <link rel="canonical" href="https://shirshen.vercel.app" />
+                {process.env.NODE_ENV === "development" && (
                     <script
                         crossOrigin="anonymous"
                         src="https://unpkg.com/react-scan/dist/auto.global.js"
                     />
-                    {/* rest of your scripts go under */}
-                </head>
-            )}
+                )}
+            </head>
             <body
                 className={`${font.variable} ${localFonts.variable} antialiased`}>
                 <ReactLenis root>

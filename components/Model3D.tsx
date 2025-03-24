@@ -3,7 +3,6 @@
 import React, { Suspense, useEffect, useRef } from "react";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { OrbitControls, useFBX } from "@react-three/drei";
-import { useMediaQuery } from "react-responsive";
 import { GLTFLoader, TGALoader } from "three-stdlib";
 import * as THREE from "three";
 import { FBXLoader } from "three-stdlib";

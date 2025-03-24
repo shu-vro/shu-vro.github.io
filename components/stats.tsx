@@ -32,8 +32,8 @@ export default function StatsSection() {
                 duration: 0.5,
                 delay: 4.75,
             }}>
-            <div className="mx-auto max-w-5xl my-0 px-6 max-md:my-8">
-                <div className="grid gap-3 *:text-start md:grid-cols-3">
+            <div className="mx-auto max-w-6xl my-0 px-6 max-md:my-8">
+                <div className="grid gap-3 *:text-start sm:grid-cols-3">
                     <div className="rounded-(--radius) space-y-4 border py-8 max-md:py-4 font-bold flex flex-row justify-center items-center gap-2">
                         <div className="text-6xl m-0 max-md:text-4xl">
                             <HyperText

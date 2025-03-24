@@ -186,7 +186,7 @@ const marqueeItems3 = [
 export default function SkillsSection() {
     return (
         <>
-            <div className="max-w-7xl mx-auto py-20 pb-10 px-4 md:px-8 lg:px-10">
+            <div className="max-w-6xl mx-auto py-20 pb-10 px-4 md:px-8 lg:px-10">
                 <h2
                     className="text-4xl mb-4 text-black dark:text-white max-w-4xl"
                     tabIndex={0}>
@@ -198,7 +198,7 @@ export default function SkillsSection() {
                     solutions across various platforms.
                 </p>
             </div>
-            <div className="relative flex max-w-7xl w-full mx-auto flex-col items-center justify-center overflow-x-hidden overflow-y-visible">
+            <div className="relative flex max-w-6xl w-full mx-auto flex-col items-center justify-center overflow-x-hidden overflow-y-visible">
                 <div className="h-32 flex flex-col">
                     <div className="grow" />
                     <Marquee pauseOnHover className="[--duration:20s]">

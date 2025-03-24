@@ -4,11 +4,12 @@ import Chip from "./ui/custom-chip";
 import { cn } from "@/lib/utils";
 import projects from "@template/projects.json";
 import Link from "next/link";
+import Image from "next/image";
 
 export default function Projects() {
     return (
         <div className="min-h-screen py-20 w-full" id="projects">
-            <div className="max-w-7xl mx-auto py-20 px-4 md:px-8 lg:px-10">
+            <div className="max-w-6xl mx-auto py-20 px-4 md:px-8 lg:px-10">
                 <h2
                     className="text-4xl mb-4 text-black dark:text-white max-w-4xl"
                     tabIndex={0}>
@@ -20,7 +21,7 @@ export default function Projects() {
                 </p>
             </div>
             {/* <LayoutGrid cards={cards} /> */}
-            <div className="max-w-7xl mx-auto">
+            <div className="max-w-6xl mx-auto">
                 {projects.map((project, index) => (
                     <ProjectShowcase
                         key={index}
@@ -73,7 +74,7 @@ const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
         <div
             data-id={id.toString().padStart(2, "0")}
             className={cn(
-                "flex flex-col md:flex-row items-center p-6 md:p-12 rounded-2xl shadow-lg relative",
+                "flex flex-col md:flex-row items-center p-6 md:p-12 rounded-2xl shadow-lg relative gap-2",
                 alternate ? "md:flex-row-reverse" : "",
                 `before:content-[attr(data-id)] before:absolute before:top-1/2 before:w-screen before:-translate-y-1/2 before:-translate-x-1/2 before:text-[250px] before:text-white/10 before:select-none before:pointer-events-none`,
                 alternate ? "text-right" : "text-left",
@@ -124,9 +125,11 @@ const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
                 target="_blank"
                 rel="noreferrer noopener"
                 className="w-full md:w-1/2 lg:w-3/5 flex justify-center mt-6 md:mt-0">
-                <img
+                <Image
                     src={imageUrl}
                     alt={title}
+                    width={800}
+                    height={800 / 1.5}
                     className="rounded-lg shadow-lg w-full transition-all brightness-100 hover:brightness-50"
                 />
             </a>

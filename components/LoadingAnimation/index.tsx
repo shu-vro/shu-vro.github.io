@@ -1,9 +1,10 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { MorphingText } from "../magicui/morphing-text";
 import { cn } from "@/lib/utils";
+import { useMediaQuery } from "react-responsive";
 
 export default function LoadingAnimation() {
     const [showText, setShowText] = useState(false);
@@ -17,8 +18,10 @@ export default function LoadingAnimation() {
             clearTimeout(timer2);
         };
     }, []);
+
+    const mediaQuery = useMediaQuery({ query: "(max-width: 600px)" });
     return (
-        <div className="fixed pointer-events-none top-0 left-0 w-full h-full flex flex-row z-999999">
+        <div className="fixed pointer-events-none top-0 left-0 w-full h-full flex flex-row z-999999 max-sm:flex-col">
             {Array(4)
                 .fill(1)
                 .map((_, i) => (

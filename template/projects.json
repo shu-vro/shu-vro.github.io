@@ -24,6 +24,9 @@
         "title": "RODE Solver",
         "description": "An application to solve ordinary differential equations integrated with LLM. Also includes functionality for differential and integral calculus solve. ",
         "tags": [
+            "react",
+            "nextjs",
+            "tailwind css",
             "ODE Solver",
             "LLM",
             "Generative AI",
@@ -42,14 +45,15 @@
         "title": "Complete portfolio website",
         "description": "\"COMPLETE-PORTFOLIO-WEBSITE\" is a comprehensive project for creating a portfolio website, utilizing HTML, CSS, and JavaScript. It showcases various web development techniques to build a visually appealing and functional personal portfolio.",
         "tags": [
-            "ODE Solver",
-            "LLM",
-            "Generative AI",
-            "Math Computation",
-            "Scientific Computing",
-            "Differentiation",
-            "Integration",
-            "Calculus"
+            "vanilla",
+            "vite",
+            "HTML",
+            "CSS",
+            "JavaScript",
+            "Responsive Design",
+            "Portfolio",
+            "Web Development",
+            "UI/UX"
         ],
         "imageUrl": "/project-images/complete-portfolio.jpg",
         "projectLink": "https://shu-vro.github.io/COMPLETE-PORTFOLIO-WEBSITE/",
