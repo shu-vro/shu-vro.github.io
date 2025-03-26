@@ -85,7 +85,7 @@ export default function Contact() {
                 <div className="shadow-input mx-auto w-full max-w-6xl rounded-none p-4 md:rounded-2xl md:p-8">
                     <form
                         className="my-8"
-                        action="https://formsubmit.co/official.shirshen@gmail.com"
+                        action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_FORMSUBMIT_KEY}`}
                         method="POST">
                         <input
                             type="text"

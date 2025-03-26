@@ -7,11 +7,12 @@ import { cn } from "@/lib/utils";
 const morphTime = 1.5;
 const cooldownTime = 0.5;
 
-const useMorphingText = (texts: string[]) => {
+const useMorphingText = (texts: string[], delay: number = 0) => {
     const textIndexRef = useRef(0);
     const morphRef = useRef(0);
     const cooldownRef = useRef(0);
     const timeRef = useRef(new Date());
+    const delayRef = useRef(delay);
 
     const text1Ref = useRef<HTMLSpanElement>(null);
     const text2Ref = useRef<HTMLSpanElement>(null);
@@ -82,6 +83,20 @@ const useMorphingText = (texts: string[]) => {
             const dt = (newTime.getTime() - timeRef.current.getTime()) / 1000;
             timeRef.current = newTime;
 
+            // If the delay hasn't passed, reduce it and ensure the first text is shown.
+            if (delayRef.current > 0) {
+                delayRef.current = Math.max(delayRef.current - dt, 0);
+                if (text1Ref.current) {
+                    text1Ref.current.textContent = texts[0];
+                    text1Ref.current.style.filter = "none";
+                    text1Ref.current.style.opacity = "100%";
+                }
+                if (text2Ref.current) {
+                    text2Ref.current.textContent = "";
+                }
+                return;
+            }
+
             cooldownRef.current -= dt;
 
             if (cooldownRef.current <= 0) doMorph();
@@ -92,7 +107,7 @@ const useMorphingText = (texts: string[]) => {
         return () => {
             cancelAnimationFrame(animationFrameId);
         };
-    }, [doMorph, doCooldown]);
+    }, [doMorph, doCooldown, texts]);
 
     return { text1Ref, text2Ref };
 };
@@ -100,10 +115,14 @@ const useMorphingText = (texts: string[]) => {
 interface MorphingTextProps {
     className?: string;
     texts: string[];
+    delay?: number;
 }
 
-const Texts: React.FC<Pick<MorphingTextProps, "texts">> = ({ texts }) => {
-    const { text1Ref, text2Ref } = useMorphingText(texts);
+const Texts: React.FC<Pick<MorphingTextProps, "texts" | "delay">> = ({
+    texts,
+    delay,
+}) => {
+    const { text1Ref, text2Ref } = useMorphingText(texts, delay);
     return (
         <>
             <span
@@ -141,13 +160,14 @@ const SvgFilters: React.FC = () => (
 export const MorphingText: React.FC<MorphingTextProps> = ({
     texts,
     className,
+    delay = 1,
 }) => (
     <div
         className={cn(
             "relative mx-auto h-16 w-full max-w-screen-md text-center text-[40pt] font-extrabold [filter:url(#threshold)_blur(0.6px)] md:h-24 lg:text-[6rem]",
             className
         )}>
-        <Texts texts={texts} />
+        <Texts texts={texts} delay={delay} />
         <SvgFilters />
     </div>
 );
