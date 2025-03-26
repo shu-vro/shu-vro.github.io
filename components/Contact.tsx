@@ -20,13 +20,68 @@ export default function Contact() {
                     Contact Me
                 </h2>
                 <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-md">
-                    My expertise spans a diverse range of <br /> technologies
-                    enabling me to deliver comprehensive and cutting-edge
-                    solutions across various platforms.
+                    Feel free to reach out to me via email or phone. You can
+                    also find me on social media.
                 </p>
             </div>
             <div className="grid grid-cols-2 max-md:grid-cols-1 gap-4 md:gap-8 max-w-6xl mx-auto">
-                <div className="" />
+                <div className="">
+                    {/* <div className="space-y-4">
+                        <div className="flex items-center gap-3">
+                            <MapPin className="text-gray-300" size={20} />
+                            <span>Dhaka, Bangladesh</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                            <Mail className="text-gray-300" size={20} />
+                            <a
+                                href="mailto:your@email.com"
+                                className="hover:underline">
+                                your@email.com
+                            </a>
+                        </div>
+                        <div className="flex items-center gap-3">
+                            <Phone className="text-gray-300" size={20} />
+                            <span>+880 1234 567 890</span>
+                        </div>
+                        <div className="flex items-center gap-3">
+                            <Globe className="text-gray-300" size={20} />
+                            <a
+                                href="https://yourwebsite.com"
+                                className="hover:underline">
+                                yourwebsite.com
+                            </a>
+                        </div>
+                    </div>
+                    <div className="flex gap-4 mt-4">
+                        <a
+                            href="https://linkedin.com/in/yourprofile"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <Linkedin
+                                className="text-gray-300 hover:text-white"
+                                size={24}
+                            />
+                        </a>
+                        <a
+                            href="https://github.com/yourprofile"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <Github
+                                className="text-gray-300 hover:text-white"
+                                size={24}
+                            />
+                        </a>
+                        <a
+                            href="https://twitter.com/yourprofile"
+                            target="_blank"
+                            rel="noopener noreferrer">
+                            <Twitter
+                                className="text-gray-300 hover:text-white"
+                                size={24}
+                            />
+                        </a>
+                    </div> */}
+                </div>
                 <div className="shadow-input mx-auto w-full max-w-6xl rounded-none p-4 md:rounded-2xl md:p-8">
                     <form className="my-8" onSubmit={handleSubmit}>
                         <LabelInputContainer className="mb-4">

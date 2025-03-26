@@ -1,4 +1,5 @@
 "use client";
+
 import React, { useEffect, useRef } from "react";
 import { motion } from "motion/react";
 import Chip from "./ui/custom-chip";
@@ -33,7 +34,7 @@ const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
 }) => {
     const mainControls = useAnimation();
     const ref = useRef(null);
-    const isInView = useInView(ref);
+    const isInView = useInView(ref, { once: true });
 
     useEffect(() => {
         if (isInView) {
@@ -144,7 +145,7 @@ const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
                         alt={title}
                         width={800}
                         height={800 / 1.5}
-                        className="rounded-lg shadow-lg w-full transition-all brightness-100 hover:brightness-50"
+                        className="rounded-lg shadow-lg w-full transition-all brightness-100 hover:brightness-60"
                     />
                 </Link>
             </motion.div>
@@ -166,7 +167,7 @@ export default function Projects() {
                     In the past 5 years, I have done many projects.
                 </p>
             </div>
-            <div className="max-w-6xl mx-auto w-full overflow-x-hidden">
+            <div className="max-w-6xl mx-auto w-full">
                 {projects.map((project, index) => (
                     <ProjectShowcase
                         key={index}

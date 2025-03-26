@@ -53,7 +53,6 @@ export default function Navbar() {
                                 <a
                                     href="#home"
                                     onClick={(e) => {
-                                        e.preventDefault();
                                         if (!lenis) return;
                                         lenis.scrollTo(0, {
                                             duration: 2,
@@ -65,9 +64,8 @@ export default function Navbar() {
                             </li>
                             <li>
                                 <a
-                                    href="#"
+                                    href="#about"
                                     onClick={(e) => {
-                                        e.preventDefault();
                                         if (!lenis) return;
                                         lenis.scrollTo("#about", {
                                             duration: 2,
@@ -79,9 +77,8 @@ export default function Navbar() {
                             </li>
                             <li>
                                 <a
-                                    href="#"
+                                    href="#projects"
                                     onClick={(e) => {
-                                        e.preventDefault();
                                         if (!lenis) return;
                                         lenis.scrollTo("#projects", {
                                             duration: 2,
@@ -97,9 +94,8 @@ export default function Navbar() {
                         <ul>
                             <li>
                                 <a
-                                    href="#"
+                                    href="#contact"
                                     onClick={(e) => {
-                                        e.preventDefault();
                                         if (!lenis) return;
                                         lenis.scrollTo("#contact", {
                                             duration: 2,

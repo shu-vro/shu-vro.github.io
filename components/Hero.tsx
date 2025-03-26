@@ -9,10 +9,13 @@ import { cn } from "@/lib/utils";
 import { Spotlight } from "./ui/spotlight-new";
 import StatsSection from "./stats";
 import { BoxReveal } from "./magicui/box-reveal";
+import Link from "next/link";
 
 export default function Hero() {
     return (
-        <div className="relative w-full h-full mx-auto rounded-md" id="home">
+        <div
+            className="relative w-full min-h-[calc(100vh-4rem)] mx-auto rounded-md flex flex-col items-start justify-start"
+            id="home">
             <Spotlight />
             <AnimatedGridPattern
                 numSquares={30}
@@ -24,7 +27,7 @@ export default function Hero() {
                     "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12 absolute"
                 )}
             />
-            <div className="h-[calc(100vh-60px-126px)] max-md:h-auto flex items-center justify-start max-md:items-start flex-row w-full max-w-6xl mx-auto">
+            <div className="h-[calc(100vh-60px-126px)] max-md:h-auto flex items-center justify-start max-md:items-start flex-row w-full max-w-6xl mx-auto grow">
                 <div className="w-full px-12 max-md:mt-12">
                     <BoxReveal delay={4.5}>
                         <h1 className="w-full text-4xl md:text-6xl lg:text-7xl font-bold flex flex-row justify-start gap-6 max-[400px]:flex-col max-[400px]:gap-0">
@@ -76,7 +79,12 @@ export default function Hero() {
 
                     <BoxReveal delay={5.25}>
                         <div className="flex flex-row gap-2 mt-4 justify-start">
-                            <ButtonFancy>Download CV</ButtonFancy>
+                            <Link
+                                href="/Shirshen Dasgupta Shuvra.pdf"
+                                target="_blank"
+                                rel="noreferrer noopener">
+                                <ButtonFancy as="span">Download CV</ButtonFancy>
+                            </Link>
                             <a
                                 href="https://github.com/shu-vro"
                                 target="_blank"

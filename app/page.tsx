@@ -4,6 +4,7 @@ import Navbar from "@/components/Navbar";
 import Projects from "@/components/Projects";
 import SkillsSection from "@/components/SkillsSection";
 import TimelineBase from "@/components/TimelineBase";
+import AboutMe from "@/components/AboutMe";
 import { Metadata } from "next";
 
 export default function Home() {
@@ -11,6 +12,7 @@ export default function Home() {
         <div>
             <Navbar />
             <Hero />
+            <AboutMe />
             <TimelineBase />
             <Projects />
             <SkillsSection />
