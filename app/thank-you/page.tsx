@@ -6,6 +6,7 @@ import { cn } from "@/lib/utils";
 const font = Fleur_De_Leah({
     variable: "--fancy-variable",
     weight: ["400"],
+    subsets: ["latin"],
 });
 
 export default function Page() {
