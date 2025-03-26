@@ -27,9 +27,9 @@ export default function FooterSection() {
     return (
         <footer className="py-16 md:py-32">
             <div className="mx-auto max-w-6xl px-6">
-                <div className="text-center">
+                <Link className="text-center" href="/">
                     <Logo />
-                </div>
+                </Link>
                 <div className="my-8 flex flex-wrap justify-center gap-6 text-sm">
                     {links.map((link, index) => (
                         <Link

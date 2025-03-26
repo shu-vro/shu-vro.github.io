@@ -15,7 +15,9 @@ const AboutMe = () => {
         <section
             className="max-w-6xl mx-auto py-16 px-4 md:px-8 lg:px-10"
             id="about">
-            <h2 className="text-2xl font-medium my-16 text-left">ABOUT ME</h2>
+            <h2 className="text-4xl my-20 text-black dark:text-white max-w-4xl">
+                ABOUT ME
+            </h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
                 {/* Left column - Personal Info */}

@@ -83,11 +83,21 @@ export default function Contact() {
                     </div> */}
                 </div>
                 <div className="shadow-input mx-auto w-full max-w-6xl rounded-none p-4 md:rounded-2xl md:p-8">
-                    <form className="my-8" onSubmit={handleSubmit}>
+                    <form
+                        className="my-8"
+                        action="https://formsubmit.co/official.shirshen@gmail.com"
+                        method="POST">
+                        <input
+                            type="text"
+                            name="_honey"
+                            className="sr-only"
+                            tabIndex={-1}
+                        />
                         <LabelInputContainer className="mb-4">
                             <Label htmlFor="firstname">Name</Label>
                             <Input
                                 id="name"
+                                name="name"
                                 placeholder="Your Name Here"
                                 type="text"
                             />
@@ -96,6 +106,7 @@ export default function Contact() {
                             <Label htmlFor="email">Email Address</Label>
                             <Input
                                 id="email"
+                                name="email"
                                 placeholder="example@gmail.com"
                                 type="email"
                             />
@@ -104,9 +115,22 @@ export default function Contact() {
                             <Label htmlFor="email">Send Message</Label>
                             <TextArea
                                 id="message"
+                                name="message"
                                 placeholder="Your Message Here..."
                             />
                         </LabelInputContainer>
+                        <input
+                            type="hidden"
+                            name="_next"
+                            value="https://shirshen.is-a.dev/thank-you"
+                        />
+                        {/* <input type="hidden" name="_captcha" value="false" /> */}
+                        <input
+                            type="hidden"
+                            name="_autoresponse"
+                            value="Thank you for contacting me! I appreciate your message and will get back to you soon."
+                        />
+                        <input type="hidden" name="_template" value="box" />
                         <div className="my-8 h-[1px] w-full bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
                         <button
                             className="group/btn relative block py-4 w-full rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white text-xl shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]"

@@ -4,6 +4,7 @@ import { ScrollCallback } from "lenis";
 import { useLenis } from "lenis/react";
 import React, { useEffect, useState } from "react";
 import Logo from "./Logo";
+import Link from "next/link";
 
 export default function Navbar() {
     const lenis = useLenis();
@@ -38,20 +39,20 @@ export default function Navbar() {
             <div className="max-w-6xl mx-auto py-4 px-4 md:px-8 lg:px-10 h-15">
                 <div className="flex justify-between items-center">
                     <div>
-                        <a
-                            href="#"
+                        <Link
+                            href="/"
                             onClick={() => {
                                 if (!lenis) return;
                                 lenis.scrollTo(0);
                             }}>
                             <Logo />
-                        </a>
+                        </Link>
                     </div>
                     <div>
                         <ul className="flex space-x-4">
                             <li>
-                                <a
-                                    href="#home"
+                                <Link
+                                    href="/#home"
                                     onClick={(e) => {
                                         if (!lenis) return;
                                         lenis.scrollTo(0, {
@@ -60,11 +61,11 @@ export default function Navbar() {
                                     }}
                                     className="text-neutral-900 dark:text-neutral-100">
                                     Home
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
-                                    href="#about"
+                                <Link
+                                    href="/#about"
                                     onClick={(e) => {
                                         if (!lenis) return;
                                         lenis.scrollTo("#about", {
@@ -73,11 +74,11 @@ export default function Navbar() {
                                     }}
                                     className="text-neutral-900 dark:text-neutral-100">
                                     About
-                                </a>
+                                </Link>
                             </li>
                             <li>
-                                <a
-                                    href="#projects"
+                                <Link
+                                    href="/#projects"
                                     onClick={(e) => {
                                         if (!lenis) return;
                                         lenis.scrollTo("#projects", {
@@ -86,15 +87,15 @@ export default function Navbar() {
                                     }}
                                     className="text-neutral-900 dark:text-neutral-100">
                                     Projects
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
                     <div>
                         <ul>
                             <li>
-                                <a
-                                    href="#contact"
+                                <Link
+                                    href="/#contact"
                                     onClick={(e) => {
                                         if (!lenis) return;
                                         lenis.scrollTo("#contact", {
@@ -103,7 +104,7 @@ export default function Navbar() {
                                     }}
                                     className="text-neutral-900 dark:text-neutral-100">
                                     Contact
-                                </a>
+                                </Link>
                             </li>
                         </ul>
                     </div>
