@@ -49,7 +49,7 @@ export default function StatsSection() {
             className="mx-auto max-w-6xl my-0 px-6 max-md:my-8 w-full"
             transition={{
                 duration: 0.5,
-                delay: 5,
+                delay: 5.5,
             }}>
             <div className="grid gap-3 *:text-start sm:grid-cols-3">
                 <StatsTile>

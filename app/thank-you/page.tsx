@@ -2,6 +2,7 @@ import React from "react";
 import Navbar from "@/components/Navbar";
 import { Fleur_De_Leah } from "next/font/google";
 import { cn } from "@/lib/utils";
+import AnimationEntry from "@/components/LoadingAnimation/animation-entry";
 
 const font = Fleur_De_Leah({
     variable: "--fancy-variable",
@@ -23,6 +24,7 @@ export default function Page() {
                 Thank You for <br />
                 Reaching out! ❤️
             </div>
+            <AnimationEntry />
         </div>
     );
 }

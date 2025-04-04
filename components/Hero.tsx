@@ -11,6 +11,8 @@ import StatsSection from "./stats";
 import { BoxReveal } from "./magicui/box-reveal";
 import Link from "next/link";
 
+const baseTime = 5.5;
+
 export default function Hero() {
     return (
         <div
@@ -29,14 +31,14 @@ export default function Hero() {
             />
             <div className="h-[calc(100vh-60px-126px)] max-md:h-auto flex items-center justify-start max-md:items-start flex-row w-full max-w-6xl mx-auto grow">
                 <div className="w-full px-12 max-md:mt-12">
-                    <BoxReveal delay={4.5}>
+                    <BoxReveal delay={baseTime}>
                         <h1 className="w-full text-4xl md:text-6xl lg:text-7xl font-bold flex flex-row justify-start gap-6 max-[400px]:flex-col max-[400px]:gap-0">
                             <span>Hi, I'm</span>
                             <span>Shirshen</span>
                             {/* <SparklesText text="Shirshen" /> */}
                         </h1>
                     </BoxReveal>
-                    <BoxReveal delay={4.75}>
+                    <BoxReveal delay={baseTime + 0.25}>
                         <h1 className="text-5xl md:text-7xl lg:text-8xl font-bold tracking-tighter flex flex-row justify-start items-start max-md:flex-col gap-6 max-md:gap-0">
                             <AuroraText
                                 colors={[
@@ -63,21 +65,21 @@ export default function Hero() {
                         </h1>
                     </BoxReveal>
                     <div className="font-bold text-start text-xl my-6">
-                        <BoxReveal delay={4.85}>
+                        <BoxReveal delay={baseTime + 0.35}>
                             <span>
                                 I'm a full stack developer with a passion for
                                 creating{" "}
                             </span>
                         </BoxReveal>
                         {/* <br /> */}
-                        <BoxReveal delay={5.1}>
+                        <BoxReveal delay={baseTime + 0.6}>
                             <span>
                                 beautiful and functional web applications.{" "}
                             </span>
                         </BoxReveal>
                     </div>
 
-                    <BoxReveal delay={5.25}>
+                    <BoxReveal delay={baseTime + 0.75}>
                         <div className="flex flex-row gap-2 mt-4 justify-start">
                             <Link
                                 href="/Shirshen Dasgupta Shuvra.pdf"

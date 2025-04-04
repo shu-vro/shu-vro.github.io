@@ -11,8 +11,8 @@ export default function LoadingAnimation() {
     const [deleteText, setDeleteText] = useState(false);
 
     useEffect(() => {
-        const timer = setTimeout(() => setShowText(true), 4000);
-        const timer2 = setTimeout(() => setDeleteText(true), 5000);
+        const timer = setTimeout(() => setShowText(true), 5000);
+        const timer2 = setTimeout(() => setDeleteText(true), 6000);
         return () => {
             clearTimeout(timer);
             clearTimeout(timer2);
@@ -33,7 +33,7 @@ export default function LoadingAnimation() {
                             animate={{ scaleX: 0 }}
                             transition={{
                                 duration: 2,
-                                delay: i * 0.05 + 4,
+                                delay: i * 0.125 + 5,
                                 ease: [0.16, 1, 0.3, 1],
                             }}
                             className="bg-[#fcf2f9] w-full h-full"

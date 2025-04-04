@@ -8,6 +8,7 @@ import Link from "next/link";
 import Image from "next/image";
 import projects from "@template/projects.json";
 import { useAnimation, useInView } from "motion/react";
+import AnimatedLink from "./AnimatedLink";
 
 interface ProjectShowcaseProps {
     year: string;
@@ -178,14 +179,14 @@ export default function Projects() {
                 ))}
             </div>
             <div className="w-full mt-10">
-                <Link
+                <AnimatedLink
                     href="/projects"
                     className="relative h-12 overflow-hidden rounded-full p-[2px] active:scale-95 duration-200 ease-[ease] mx-auto block w-48">
                     <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
                     <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-4 py-2 text-xl font-medium text-white backdrop-blur-3xl">
                         LOAD MORE
                     </span>
-                </Link>
+                </AnimatedLink>
             </div>
         </div>
     );

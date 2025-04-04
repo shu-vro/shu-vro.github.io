@@ -3,6 +3,11 @@ import React from "react";
 import { Label } from "@/components/ui/label";
 import { Input, TextArea } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
+import { IoLogoGithub } from "react-icons/io5";
+import { RiLinkedinFill } from "react-icons/ri";
+import ButtonFancy from "./ui/ButtonFancy";
+import { BsWhatsapp } from "react-icons/bs";
+import { PiMessengerLogoBold } from "react-icons/pi";
 
 export default function Contact() {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -24,65 +29,73 @@ export default function Contact() {
                     also find me on social media.
                 </p>
             </div>
-            <div className="grid grid-cols-2 max-md:grid-cols-1 gap-4 md:gap-8 max-w-6xl mx-auto">
-                <div className="">
-                    {/* <div className="space-y-4">
-                        <div className="flex items-center gap-3">
-                            <MapPin className="text-gray-300" size={20} />
-                            <span>Dhaka, Bangladesh</span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                            <Mail className="text-gray-300" size={20} />
+            <div className="grid grid-cols-2 max-lg:grid-cols-1 max-w-6xl mx-auto">
+                <address className="px-4 md:px-8 lg:py-16">
+                    <div>
+                        <h3 className="text-2xl font-semibold mb-2 text-black dark:text-white">
+                            Location
+                        </h3>
+                        <p className="text-neutral-700 dark:text-neutral-300">
+                            Motihar Thana, Rajshahi, Bangladesh
+                        </p>
+                    </div>
+                    <div>
+                        <h3 className="text-2xl font-semibold mb-2 text-black dark:text-white">
+                            Contact Info
+                        </h3>
+                        <p className="text-neutral-700 dark:text-neutral-300">
+                            Email: official.shirshen@gmail.com
+                        </p>
+                    </div>
+                    <div>
+                        <h3 className="text-2xl font-semibold mb-2 text-black dark:text-white">
+                            Social Links
+                        </h3>
+                        <div className="flex gap-4">
                             <a
-                                href="mailto:your@email.com"
-                                className="hover:underline">
-                                your@email.com
+                                href="https://github.com/shu-vro"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-2xl">
+                                <ButtonFancy as="span" className="px-2">
+                                    <IoLogoGithub />
+                                    <span className="sr-only">GitHub</span>
+                                </ButtonFancy>
                             </a>
-                        </div>
-                        <div className="flex items-center gap-3">
-                            <Phone className="text-gray-300" size={20} />
-                            <span>+880 1234 567 890</span>
-                        </div>
-                        <div className="flex items-center gap-3">
-                            <Globe className="text-gray-300" size={20} />
                             <a
-                                href="https://yourwebsite.com"
-                                className="hover:underline">
-                                yourwebsite.com
+                                href="https://linkedin.com/in/shirshen-dasgupta"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-2xl">
+                                <ButtonFancy as="span" className="px-2">
+                                    <RiLinkedinFill />
+                                    <span className="sr-only">LinkedIn</span>
+                                </ButtonFancy>
+                            </a>
+                            <a
+                                href="https://m.me/shirshen.shuvro"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-2xl">
+                                <ButtonFancy as="span" className="px-2">
+                                    <PiMessengerLogoBold />
+                                    <span className="sr-only">Messenger</span>
+                                </ButtonFancy>
+                            </a>
+                            <a
+                                href="https://m.me/shirshen.shuvro"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className="text-2xl">
+                                <ButtonFancy as="span" className="px-2">
+                                    <BsWhatsapp />
+                                    <span className="sr-only">Whatsapp</span>
+                                </ButtonFancy>
                             </a>
                         </div>
                     </div>
-                    <div className="flex gap-4 mt-4">
-                        <a
-                            href="https://linkedin.com/in/yourprofile"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            <Linkedin
-                                className="text-gray-300 hover:text-white"
-                                size={24}
-                            />
-                        </a>
-                        <a
-                            href="https://github.com/yourprofile"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            <Github
-                                className="text-gray-300 hover:text-white"
-                                size={24}
-                            />
-                        </a>
-                        <a
-                            href="https://twitter.com/yourprofile"
-                            target="_blank"
-                            rel="noopener noreferrer">
-                            <Twitter
-                                className="text-gray-300 hover:text-white"
-                                size={24}
-                            />
-                        </a>
-                    </div> */}
-                </div>
-                <div className="shadow-input mx-auto w-full max-w-6xl rounded-none p-4 md:rounded-2xl md:p-8">
+                </address>
+                <div className="shadow-input mx-auto w-full max-w-6xl rounded-none p-4 md:p-8">
                     <form
                         className="my-8"
                         action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_FORMSUBMIT_KEY}`}

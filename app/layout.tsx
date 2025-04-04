@@ -4,7 +4,6 @@ import localFont from "next/font/local";
 import { ReactLenis } from "lenis/react";
 import "./globals.css";
 import CustomCursor from "@/components/CustomCursor";
-import LoadingAnimation from "@/components/LoadingAnimation";
 import { cn } from "@/lib/utils";
 import FooterSection from "@/components/footer";
 import SparklesBackground from "@/components/SparklesBackground";
@@ -90,7 +89,6 @@ export default function RootLayout({
                     <FooterSection />
                 </ReactLenis>
                 <CustomCursor />
-                <LoadingAnimation />
             </body>
         </html>
     );
