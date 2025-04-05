@@ -3,8 +3,8 @@ import React from "react";
 import { SparklesCore } from "@components/ui/sparkles";
 import { useMediaQuery } from "react-responsive";
 
-export default function SparklesPreview() {
-    const prefersReducedMotion = useMediaQuery({
+export default function SparklesBackground() {
+    const prefersMotion = useMediaQuery({
         query: "(prefers-reduced-motion: no-preference)",
     });
     return (

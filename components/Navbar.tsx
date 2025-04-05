@@ -206,13 +206,22 @@ export default function NavbarDemo() {
                         isOpen={isMobileMenuOpen}
                         onClose={() => setIsMobileMenuOpen(false)}>
                         {navItems.map((item, idx) => (
-                            <a
+                            <Link
                                 key={`mobile-link-${idx}`}
                                 href={item.link}
-                                onClick={() => setIsMobileMenuOpen(false)}
-                                className="relative text-neutral-600 dark:text-neutral-300">
+                                onClick={(e) => {
+                                    e.preventDefault();
+                                    const target =
+                                        e.currentTarget.getAttribute("href");
+                                    if (!target || !lenis) return;
+                                    lenis.scrollTo(target, {
+                                        duration: 2,
+                                    });
+                                    setIsMobileMenuOpen(false);
+                                }}
+                                className="relative text-neutral-600 dark:text-neutral-300 w-full">
                                 <span className="block">{item.name}</span>
-                            </a>
+                            </Link>
                         ))}
                         <div className="flex w-full flex-col gap-4">
                             <NavbarButton
