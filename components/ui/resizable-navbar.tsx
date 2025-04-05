@@ -1,6 +1,7 @@
 "use client";
 import { cn } from "@/lib/utils";
-import { IconMenu2, IconX } from "@tabler/icons-react";
+import { HiOutlineMenuAlt4 } from "react-icons/hi";
+import { RiCloseLargeFill } from "react-icons/ri";
 import {
     motion,
     AnimatePresence,
@@ -9,7 +10,6 @@ import {
 } from "motion/react";
 import Link from "next/link";
 import React, { useRef, useState } from "react";
-import Image from "next/image";
 
 interface NavbarProps {
     children: React.ReactNode;
@@ -229,9 +229,15 @@ export const MobileNavToggle = ({
     onClick: () => void;
 }) => {
     return isOpen ? (
-        <IconX className="text-black dark:text-white" onClick={onClick} />
+        <RiCloseLargeFill
+            className="text-black dark:text-white text-2xl"
+            onClick={onClick}
+        />
     ) : (
-        <IconMenu2 className="text-black dark:text-white" onClick={onClick} />
+        <HiOutlineMenuAlt4
+            className="text-black dark:text-white text-3xl"
+            onClick={onClick}
+        />
     );
 };
 
