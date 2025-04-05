@@ -29,7 +29,7 @@ export default function Hero() {
                     "inset-x-0 inset-y-[-30%] h-[200%] skew-y-12 absolute"
                 )}
             />
-            <div className="h-[calc(100vh-60px-126px)] max-md:h-auto flex items-center justify-start max-md:items-start flex-row w-full max-w-6xl mx-auto grow">
+            <div className="h-[calc(100vh-60px-126px)] max-md:h-auto max-md:mt-12 flex items-center justify-start max-md:items-start flex-row w-full max-w-6xl mx-auto grow">
                 <div className="w-full px-12 max-md:mt-12">
                     <BoxReveal delay={baseTime}>
                         <h1 className="w-full text-4xl md:text-6xl lg:text-7xl font-bold flex flex-row justify-start gap-6 max-[400px]:flex-col max-[400px]:gap-0">

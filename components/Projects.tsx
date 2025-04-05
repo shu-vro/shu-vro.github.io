@@ -44,18 +44,6 @@ const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
             mainControls.start("hidden");
         }
     }, [isInView, mainControls]);
-    // Container animation: whole project appears from bottom.
-    const containerVariants = {
-        hidden: { opacity: 0, y: 50 },
-        visible: {
-            opacity: 1,
-            y: 0,
-            transition: {
-                when: "beforeChildren",
-                staggerChildren: 0.2,
-            },
-        },
-    };
 
     // Text container: slides in from the left if not alternate, from right if alternate.
     const textVariants = {
@@ -78,11 +66,8 @@ const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
     };
 
     return (
-        <motion.div
+        <div
             data-id={id.toString().padStart(2, "0")}
-            variants={containerVariants}
-            initial="hidden"
-            animate={mainControls}
             ref={ref}
             className={cn(
                 "flex flex-col md:flex-row items-center p-6 md:p-12 rounded-2xl shadow-lg relative gap-2",
@@ -150,7 +135,7 @@ const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
                     />
                 </Link>
             </motion.div>
-        </motion.div>
+        </div>
     );
 };
 
@@ -168,7 +153,7 @@ export default function Projects() {
                     In the past 5 years, I have done many projects.
                 </p>
             </div>
-            <div className="max-w-6xl mx-auto w-full">
+            <div className="max-w-6xl mx-auto w-full overflow-x-hidden overflow-y-visible">
                 {projects.map((project, index) => (
                     <ProjectShowcase
                         key={index}
