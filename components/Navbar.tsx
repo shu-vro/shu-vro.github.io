@@ -132,15 +132,15 @@ export default function NavbarDemo() {
     const navItems = [
         {
             name: "Home",
-            link: "#home",
+            link: "/#home",
         },
         {
             name: "About",
-            link: "#about",
+            link: "/#about",
         },
         {
             name: "Projects",
-            link: "#projects",
+            link: "/#projects",
         },
     ];
 
@@ -152,32 +152,31 @@ export default function NavbarDemo() {
                 {/* Desktop Navigation */}
                 <NavBody>
                     <Link
-                        href="#"
+                        href="/"
                         className="relative z-20 mr-4 flex items-center space-x-2 px-2 py-1 text-sm font-normal text-black">
                         <Logo />
                     </Link>
                     <NavItems
                         items={navItems}
                         onItemClick={(e) => {
-                            e.preventDefault();
                             const target = e.currentTarget.getAttribute("href");
                             if (!target || !lenis) return;
 
-                            lenis.scrollTo(target, {
+                            lenis.scrollTo(target.split("/")[1], {
                                 duration: 2,
                             });
                         }}
                     />
                     <div className="flex items-center gap-4">
                         <NavbarButton
-                            href="#contact"
+                            href="/#contact"
                             variant="secondary"
                             onClick={(e) => {
                                 e.preventDefault();
                                 const target =
                                     e.currentTarget.getAttribute("href");
                                 if (!target || !lenis) return;
-                                lenis.scrollTo(target, {
+                                lenis.scrollTo("#contact", {
                                     duration: 2,
                                 });
                             }}>
@@ -210,7 +209,6 @@ export default function NavbarDemo() {
                                 key={`mobile-link-${idx}`}
                                 href={item.link}
                                 onClick={(e) => {
-                                    e.preventDefault();
                                     const target =
                                         e.currentTarget.getAttribute("href");
                                     if (!target || !lenis) return;
@@ -225,13 +223,12 @@ export default function NavbarDemo() {
                         ))}
                         <div className="flex w-full flex-col gap-4">
                             <NavbarButton
-                                href="#contact"
+                                href="/#contact"
                                 onClick={(e) => {
-                                    e.preventDefault();
                                     const target =
                                         e.currentTarget.getAttribute("href");
                                     if (!target || !lenis) return;
-                                    lenis.scrollTo(target, {
+                                    lenis.scrollTo("#contact", {
                                         duration: 2,
                                     });
                                     setIsMobileMenuOpen(false);

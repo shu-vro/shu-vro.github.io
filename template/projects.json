@@ -17,7 +17,8 @@
         ],
         "imageUrl": "/project-images/uibuild.jpg",
         "projectLink": "https://github.com/shu-vro/uibuild",
-        "ghLink": "https://github.com/shu-vro/uibuild"
+        "ghLink": "https://github.com/shu-vro/uibuild",
+        "color": "#00569d"
     },
     {
         "year": "2024",
@@ -36,9 +37,10 @@
             "Integration",
             "Calculus"
         ],
-        "imageUrl": "/project-images/rode.jpg",
+        "imageUrl": "/project-images/rode-app.png",
         "projectLink": "https://rode-solver.vercel.app/",
-        "ghLink": "https://github.com/shu-vro/RODE-Solver"
+        "ghLink": "https://github.com/shu-vro/RODE-Solver",
+        "color": "#018a60"
     },
     {
         "year": "2021",
@@ -55,8 +57,9 @@
             "Web Development",
             "UI/UX"
         ],
-        "imageUrl": "/project-images/complete-portfolio.jpg",
+        "imageUrl": "/project-images/complete-portfolio-site.png",
         "projectLink": "https://shu-vro.github.io/COMPLETE-PORTFOLIO-WEBSITE/",
-        "ghLink": "https://github.com/shu-vro/COMPLETE-PORTFOLIO-WEBSITE"
+        "ghLink": "https://github.com/shu-vro/COMPLETE-PORTFOLIO-WEBSITE",
+        "color": "#eb8133"
     }
 ]
