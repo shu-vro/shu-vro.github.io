@@ -1,6 +1,7 @@
 import React from "react";
 import { Marquee } from "./magicui/marquee";
 import { AnimatedTooltip } from "./ui/animated-tooltip";
+import MainHeading from "./MainHeading";
 
 const marqueeItems1 = [
     {
@@ -187,11 +188,7 @@ export default function SkillsSection() {
     return (
         <>
             <div className="max-w-6xl mx-auto py-20 pb-10 px-4 md:px-8 lg:px-10">
-                <h2
-                    className="text-4xl mb-4 text-black dark:text-white max-w-4xl"
-                    tabIndex={0}>
-                    My Tech Stack
-                </h2>
+                <MainHeading>My Tech Stack</MainHeading>
                 <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-md">
                     My expertise spans a diverse range of <br /> technologies
                     enabling me to deliver comprehensive and cutting-edge

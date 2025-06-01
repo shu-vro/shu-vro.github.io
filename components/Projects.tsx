@@ -9,6 +9,7 @@ import Image from "next/image";
 import projects from "@template/projects.json";
 import { useAnimation, useInView } from "motion/react";
 import AnimatedLink from "./AnimatedLink";
+import MainHeading from "./MainHeading";
 
 interface ProjectShowcaseProps {
     year: string;
@@ -146,11 +147,7 @@ export default function Projects() {
     return (
         <div className="min-h-screen py-20 w-full" id="projects">
             <div className="max-w-6xl mx-auto py-20 px-4 md:px-8 lg:px-10">
-                <h2
-                    className="text-4xl mb-4 text-black dark:text-white max-w-4xl"
-                    tabIndex={0}>
-                    Projects That I Have Done
-                </h2>
+                <MainHeading>Projects That I Have Done</MainHeading>
                 <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-sm">
                     I learn by doing. <br />
                     In the past 5 years, I have done many projects.

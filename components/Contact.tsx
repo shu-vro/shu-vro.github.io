@@ -8,6 +8,7 @@ import { RiLinkedinFill } from "react-icons/ri";
 import ButtonFancy from "./ui/ButtonFancy";
 import { BsWhatsapp } from "react-icons/bs";
 import { PiMessengerLogoBold } from "react-icons/pi";
+import MainHeading from "./MainHeading";
 
 export default function Contact() {
     const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
@@ -19,11 +20,7 @@ export default function Contact() {
             <div
                 className="max-w-6xl mx-auto py-20 pb-10 px-4 md:px-8 lg:px-10"
                 id="contact">
-                <h2
-                    className="text-4xl mb-4 text-black dark:text-white max-w-4xl"
-                    tabIndex={0}>
-                    Contact Me
-                </h2>
+                <MainHeading>Contact Me</MainHeading>
                 <p className="text-neutral-700 dark:text-neutral-300 text-sm md:text-base max-w-md">
                     Feel free to reach out to me via email or phone. You can
                     also find me on social media.

@@ -1,5 +1,28 @@
 [
     {
+        "title": "2025",
+        "description": "Joined the Chorcha team as a Full Stack Developer, building cross-platform solutions and pioneering AI integration through RAG systems and intelligent agents",
+        "specs": [
+            "Developed end-to-end solutions spanning Android, web platforms, and API infrastructure",
+            "Architected robust backend systems to support diverse client applications",
+            "Created responsive frontends with modern frameworks for optimal user experience",
+            "Implemented Retrieval-Augmented Generation (RAG) systems to enhance information access",
+            "Designed autonomous AI agents to streamline operations and automate workflows",
+            "Collaborated with cross-functional teams to deliver cohesive product experiences",
+            "Applied machine learning techniques to solve complex business challenges",
+            "Optimized large language model implementations for production environments",
+            "Balanced technical innovation with practical business requirements"
+        ],
+        "tags": [
+            "#Chorcha",
+            "#FullStack",
+            "#AIEngineering",
+            "#MobileDev",
+            "#RAGSystems",
+            "#SoftwareArchitecture"
+        ]
+    },
+    {
         "title": "2023",
         "description": "Earned a place in the Computer Science and Engineering (CSE) department at Rajshahi University of Engineering & Technology (RUET), marking a significant milestone in my academic journey",
         "specs": [
