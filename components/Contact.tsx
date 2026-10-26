@@ -1,5 +1,6 @@
 "use client";
-import React, { useActionState } from "react";
+import React, { useActionState, useEffect, useRef } from "react";
+import Script from "next/script";
 import { Label } from "@/components/ui/label";
 import { Input, TextArea } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
@@ -11,13 +12,48 @@ import { PiMessengerLogoBold } from "react-icons/pi";
 import MainHeading from "./MainHeading";
 import { sendContactEmail } from "@/app/actions";
 
+declare global {
+    interface Window {
+        turnstile?: {
+            render: (
+                el: HTMLElement,
+                opts: { sitekey: string; action: string; theme?: string }
+            ) => string;
+            reset: (widgetId: string) => void;
+        };
+    }
+}
+
 export default function Contact() {
     const [error, formAction, pending] = useActionState(
         sendContactEmail,
         null
     );
+    const turnstileRef = useRef<HTMLDivElement>(null);
+    const widgetId = useRef<string | null>(null);
+
+    const renderTurnstile = () => {
+        if (!window.turnstile || !turnstileRef.current || widgetId.current)
+            return;
+        widgetId.current = window.turnstile.render(turnstileRef.current, {
+            sitekey: process.env.NEXT_PUBLIC_CLOUDFLARE_TURNSTILE_SITE_KEY!,
+            action: "contact",
+            theme: "dark",
+        });
+    };
+
+    // tokens are single-use: get a fresh one after every failed attempt
+    useEffect(() => {
+        if (!pending && widgetId.current)
+            window.turnstile?.reset(widgetId.current);
+    }, [pending]);
+
     return (
         <>
+            <Script
+                src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit"
+                onReady={renderTurnstile}
+            />
             <div
                 className="max-w-6xl mx-auto py-20 pb-10 px-4 md:px-8 lg:px-10"
                 id="contact">
@@ -135,6 +171,7 @@ export default function Contact() {
                                 required
                             />
                         </LabelInputContainer>
+                        <div ref={turnstileRef} className="mb-4" />
                         {error && (
                             <p role="alert" className="text-red-500 text-sm">
                                 {error}

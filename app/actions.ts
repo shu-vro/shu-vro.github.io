@@ -1,6 +1,7 @@
 "use server";
 
 import nodemailer from "nodemailer";
+import { headers } from "next/headers";
 import { redirect } from "next/navigation";
 
 const EMAIL = "official.shirshen@gmail.com";
@@ -12,6 +13,46 @@ const transporter = nodemailer.createTransport({
         pass: process.env.GOOGLE_APP_PASSWORD?.replace(/\s/g, ""),
     },
 });
+
+const TURNSTILE_HOSTNAMES = (process.env.TURNSTILE_HOSTNAMES ?? "")
+    .split(",")
+    .map((h) => h.trim())
+    .filter(Boolean);
+
+// fails closed: anything other than a clean, matching success is a rejection
+async function verifyTurnstile(token: FormDataEntryValue | null) {
+    if (typeof token !== "string" || !token || token.length > 2048)
+        return false;
+
+    const h = await headers();
+    const ip =
+        h.get("x-forwarded-for")?.split(",")[0].trim() || h.get("x-real-ip");
+
+    try {
+        const res = await fetch(
+            "https://challenges.cloudflare.com/turnstile/v0/siteverify",
+            {
+                method: "POST",
+                body: new URLSearchParams({
+                    secret: process.env.CLOUDFLARE_TURNSTILE_SECRET_KEY ?? "",
+                    response: token,
+                    ...(ip && { remoteip: ip }),
+                }),
+                signal: AbortSignal.timeout(10_000),
+            }
+        );
+        if (!res.ok) return false;
+        const data = await res.json();
+        return (
+            data.success === true &&
+            data.action === "contact" &&
+            TURNSTILE_HOSTNAMES.includes(data.hostname)
+        );
+    } catch (err) {
+        console.error("Turnstile verification failed:", err);
+        return false;
+    }
+}
 
 export async function sendContactEmail(_: string | null, form: FormData) {
     // honeypot filled = bot; pretend it worked
@@ -32,6 +73,10 @@ export async function sendContactEmail(_: string | null, form: FormData) {
         message.length > 5000
     ) {
         return "Please enter your name, a valid email and a message (max 5000 characters).";
+    }
+
+    if (!(await verifyTurnstile(form.get("cf-turnstile-response")))) {
+        return "Verification failed. Please complete the check and try again.";
     }
 
     try {
