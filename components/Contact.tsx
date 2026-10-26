@@ -1,5 +1,5 @@
 "use client";
-import React from "react";
+import React, { useActionState } from "react";
 import { Label } from "@/components/ui/label";
 import { Input, TextArea } from "@/components/ui/input";
 import { cn } from "@/lib/utils";
@@ -9,12 +9,13 @@ import ButtonFancy from "./ui/ButtonFancy";
 import { BsWhatsapp } from "react-icons/bs";
 import { PiMessengerLogoBold } from "react-icons/pi";
 import MainHeading from "./MainHeading";
+import { sendContactEmail } from "@/app/actions";
 
 export default function Contact() {
-    const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
-        e.preventDefault();
-        console.log("Form submitted");
-    };
+    const [error, formAction, pending] = useActionState(
+        sendContactEmail,
+        null
+    );
     return (
         <>
             <div
@@ -95,21 +96,23 @@ export default function Contact() {
                 <div className="shadow-input mx-auto w-full max-w-6xl rounded-none p-4 md:p-8">
                     <form
                         className="my-8"
-                        action={`https://formsubmit.co/${process.env.NEXT_PUBLIC_FORMSUBMIT_KEY}`}
-                        method="POST">
+                        action={formAction}>
                         <input
                             type="text"
                             name="_honey"
                             className="sr-only"
                             tabIndex={-1}
+                            autoComplete="off"
                         />
                         <LabelInputContainer className="mb-4">
-                            <Label htmlFor="firstname">Name</Label>
+                            <Label htmlFor="name">Name</Label>
                             <Input
                                 id="name"
                                 name="name"
                                 placeholder="Your Name Here"
                                 type="text"
+                                maxLength={100}
+                                required
                             />
                         </LabelInputContainer>
                         <LabelInputContainer className="mb-4">
@@ -119,33 +122,30 @@ export default function Contact() {
                                 name="email"
                                 placeholder="example@gmail.com"
                                 type="email"
+                                required
                             />
                         </LabelInputContainer>
                         <LabelInputContainer className="mb-4">
-                            <Label htmlFor="email">Send Message</Label>
+                            <Label htmlFor="message">Send Message</Label>
                             <TextArea
                                 id="message"
                                 name="message"
                                 placeholder="Your Message Here..."
+                                maxLength={5000}
+                                required
                             />
                         </LabelInputContainer>
-                        <input
-                            type="hidden"
-                            name="_next"
-                            value="https://shirshen.is-a.dev/thank-you"
-                        />
-                        {/* <input type="hidden" name="_captcha" value="false" /> */}
-                        <input
-                            type="hidden"
-                            name="_autoresponse"
-                            value="Thank you for contacting me! I appreciate your message and will get back to you soon."
-                        />
-                        <input type="hidden" name="_template" value="box" />
+                        {error && (
+                            <p role="alert" className="text-red-500 text-sm">
+                                {error}
+                            </p>
+                        )}
                         <div className="my-8 h-[1px] w-full bg-gradient-to-r from-transparent via-neutral-300 to-transparent dark:via-neutral-700" />
                         <button
                             className="group/btn relative block py-4 w-full rounded-md bg-gradient-to-br from-black to-neutral-600 font-medium text-white text-xl shadow-[0px_1px_0px_0px_#ffffff40_inset,0px_-1px_0px_0px_#ffffff40_inset] dark:bg-zinc-800 dark:from-zinc-900 dark:to-zinc-900 dark:shadow-[0px_1px_0px_0px_#27272a_inset,0px_-1px_0px_0px_#27272a_inset]"
-                            type="submit">
-                            Send Message &rarr;
+                            type="submit"
+                            disabled={pending}>
+                            {pending ? "Sending..." : <>Send Message &rarr;</>}
                             <BottomGradient />
                         </button>
                     </form>
