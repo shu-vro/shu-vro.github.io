@@ -105,13 +105,17 @@ const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
                         <Chip key={index}>#{tag}</Chip>
                     ))}
                 </div>
-                <a
-                    href={projectLink}
-                    target="_blank"
-                    rel="noreferrer noopener"
-                    className="inline-block bg-white text-black px-5 py-2 rounded-lg font-medium hover:bg-gray-200 transition">
-                    View Project →
-                </a>
+                {projectLink !== ghLink && (
+                    <a
+                        href={projectLink}
+                        target="_blank"
+                        rel="noreferrer noopener"
+                        className="inline-block bg-white text-black px-5 py-2 rounded-lg font-medium hover:bg-gray-200 transition">
+                        {projectLink.includes("/releases")
+                            ? "Download →"
+                            : "View Project →"}
+                    </a>
+                )}
                 <a
                     href={ghLink}
                     target="_blank"
@@ -143,7 +147,7 @@ const ProjectShowcase: React.FC<ProjectShowcaseProps> = ({
     );
 };
 
-export default function Projects() {
+export default function Projects({ limit }: { limit?: number }) {
     return (
         <div className="min-h-screen py-20 w-full" id="projects">
             <div className="max-w-6xl mx-auto py-20 px-4 md:px-8 lg:px-10">
@@ -154,7 +158,7 @@ export default function Projects() {
                 </p>
             </div>
             <div className="mx-auto w-full overflow-x-hidden overflow-y-visible">
-                {projects.map((project, index) => (
+                {projects.slice(0, limit).map((project, index) => (
                     <ProjectShowcase
                         key={index}
                         id={index + 1}
@@ -163,22 +167,23 @@ export default function Projects() {
                     />
                 ))}
             </div>
-            <div className="w-full mt-10">
-                <AnimatedLink
-                    href="/projects"
-                    className="relative h-12 overflow-hidden rounded-full p-[2px] active:scale-95 duration-200 ease-[ease] mx-auto block w-48">
-                    <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
-                    <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-4 py-2 text-xl font-medium text-white backdrop-blur-3xl">
-                        LOAD MORE
-                    </span>
-                </AnimatedLink>
-            </div>
+            {limit && limit < projects.length && (
+                <div className="w-full mt-10">
+                    <AnimatedLink
+                        href="/projects"
+                        className="relative h-12 overflow-hidden rounded-full p-[2px] active:scale-95 duration-200 ease-[ease] mx-auto block w-48">
+                        <span className="absolute inset-[-1000%] animate-[spin_2s_linear_infinite] bg-[conic-gradient(from_90deg_at_50%_50%,#E2CBFF_0%,#393BB2_50%,#E2CBFF_100%)]" />
+                        <span className="inline-flex h-full w-full cursor-pointer items-center justify-center rounded-full bg-slate-950 px-4 py-2 text-xl font-medium text-white backdrop-blur-3xl">
+                            LOAD MORE
+                        </span>
+                    </AnimatedLink>
+                </div>
+            )}
         </div>
     );
 }
 
 function DesktopMockup({ src, color }: { src: string; color: string }) {
-    console.log(color);
     return (
         <div
             className="flex items-center justify-center h-full text-[0.4vw] max-md:text-[1.2vw] rounded-2xl"

@@ -1,65 +1,184 @@
 [
     {
+        "year": "2026",
+        "title": "my-browser",
+        "description": "A low-memory macOS web browser: a thin Rust shell over WebKit with sleeping tabs, built-in tracker and ad blocking, and Chrome extension support.",
+        "tags": ["rust", "macos", "webkit", "objc2", "sqlite"],
+        "imageUrl": "/project-images/my-browser.jpg",
+        "projectLink": "https://github.com/shu-vro/my-browser/releases/latest",
+        "ghLink": "https://github.com/shu-vro/my-browser",
+        "color": "#3B3FC4"
+    },
+    {
+        "year": "2026",
+        "title": "Edge Read Aloud",
+        "description": "Chromium extension that reads any web page aloud with Microsoft Edge's neural voices, highlighting each word as it is spoken. 300+ voices, no API key.",
+        "tags": [
+            "typescript",
+            "chrome-extension",
+            "wxt",
+            "tts",
+            "websocket",
+            "bun"
+        ],
+        "imageUrl": "/project-images/edge-read-aloud.jpg",
+        "projectLink": "https://github.com/shu-vro/Edge-Read-Aloud/releases/latest",
+        "ghLink": "https://github.com/shu-vro/Edge-Read-Aloud",
+        "color": "#8a6d00"
+    },
+    {
+        "year": "2026",
+        "title": "arpmac",
+        "description": "Rust TUI for macOS Internet Sharing: lists connected devices, shows per-client bandwidth, and blocks or unblocks clients with pf firewall rules.",
+        "tags": ["rust", "ratatui", "tui", "macos", "networking", "pfctl"],
+        "imageUrl": "/project-images/arpmac.jpg",
+        "projectLink": "https://shu-vro.github.io/arpmac/",
+        "ghLink": "https://github.com/shu-vro/arpmac",
+        "color": "#8a3a1c"
+    },
+    {
+        "year": "2026",
+        "title": "Local LLM",
+        "description": "Offline ChatGPT-style mobile app that downloads and runs LLMs like Gemma on-device, with image input, a model library, and chats stored in local SQLite.",
+        "tags": [
+            "react-native",
+            "expo",
+            "typescript",
+            "llm",
+            "sqlite",
+            "on-device-ai"
+        ],
+        "imageUrl": "/project-images/local-llm.jpg",
+        "projectLink": "https://github.com/shu-vro/local-llm/releases/latest",
+        "ghLink": "https://github.com/shu-vro/local-llm",
+        "color": "#1b2a3f"
+    },
+    {
+        "year": "2025",
+        "title": "Coderem",
+        "description": "Flutter Android app that reminds you of upcoming Codeforces contests and shows your rating graph, submission stats and contest history.",
+        "tags": [
+            "flutter",
+            "dart",
+            "android",
+            "codeforces",
+            "fl_chart",
+            "notifications"
+        ],
+        "imageUrl": "/project-images/coderem.jpg",
+        "projectLink": "https://github.com/shu-vro/coderem/releases/latest",
+        "ghLink": "https://github.com/shu-vro/coderem",
+        "color": "#be1558"
+    },
+    {
         "year": "2025",
         "title": "UiBuild",
-        "description": "A website that can build websites",
+        "description": "Drag-and-drop website builder. Compose pages from blocks, style each element, preview at device widths, save versions and publish to a public URL.",
         "tags": [
-            "react",
             "nextjs",
-            "tailwind css",
-            "framer motion",
-            "styled components",
-            "radixUI",
-            "heroUI",
-            "craft.js",
-            "lucide",
-            "lenis"
+            "react",
+            "typescript",
+            "craftjs",
+            "appwrite",
+            "tailwind",
+            "cloudinary"
         ],
         "imageUrl": "/project-images/uibuild.jpg",
-        "projectLink": "https://github.com/shu-vro/uibuild",
+        "projectLink": "https://uibuild.vercel.app",
         "ghLink": "https://github.com/shu-vro/uibuild",
-        "color": "#00569d"
+        "color": "#5b2a86"
+    },
+    {
+        "year": "2024",
+        "title": "G2000 Headset Landing Page",
+        "description": "Mock product page for a gaming headset: a 3D model in a cube-mapped scene rotates, moves and scales with GSAP as you scroll through the sections.",
+        "tags": ["typescript", "threejs", "gsap", "vite", "tailwindcss"],
+        "imageUrl": "/project-images/microphone-sales-mock.jpg",
+        "projectLink": "https://shu-vro.github.io/microphone-sales-mock/",
+        "ghLink": "https://github.com/shu-vro/microphone-sales-mock",
+        "color": "#0b5f7a"
+    },
+    {
+        "year": "2024",
+        "title": "Video / Audio Chat",
+        "description": "Browser video calls and text chat for up to four people. Peers connect directly over WebRTC, and a small Socket.io server relays the signaling and chat messages.",
+        "tags": [
+            "nextjs",
+            "react",
+            "webrtc",
+            "socket.io",
+            "express",
+            "tailwindcss",
+            "bun"
+        ],
+        "imageUrl": "/project-images/video-audio-chat.jpg",
+        "projectLink": "https://github.com/shu-vro/video-audio-chat",
+        "ghLink": "https://github.com/shu-vro/video-audio-chat",
+        "color": "#2563eb"
     },
     {
         "year": "2024",
         "title": "RODE Solver",
-        "description": "An application to solve ordinary differential equations integrated with LLM. Also includes functionality for differential and integral calculus solve. ",
+        "description": "Chat-style solver for ODEs, derivatives and integrals: type math in a MathLive editor, get step-by-step Gemini solutions, save them and browse/vote on others'.",
         "tags": [
-            "react",
             "nextjs",
-            "tailwind css",
-            "ODE Solver",
-            "LLM",
-            "Generative AI",
-            "Math Computation",
-            "Scientific Computing",
-            "Differentiation",
-            "Integration",
-            "Calculus"
+            "react",
+            "gemini",
+            "firebase",
+            "mathlive",
+            "tailwind",
+            "pwa"
         ],
-        "imageUrl": "/project-images/rode-app.png",
-        "projectLink": "https://rode-solver.vercel.app/",
+        "imageUrl": "/project-images/rode-solver.jpg",
+        "projectLink": "https://rode-solver.vercel.app",
         "ghLink": "https://github.com/shu-vro/RODE-Solver",
-        "color": "#018a60"
+        "color": "#6d28d9"
+    },
+    {
+        "year": "2023",
+        "title": "Open Hearts",
+        "description": "Group chat app with markdown messages, voice notes, GIFs, replies, pinned messages, group admin tools and WebRTC video calls.",
+        "tags": ["nextjs", "typescript", "firebase", "mui", "webrtc", "peerjs"],
+        "imageUrl": "/project-images/open-hearts-next.jpg",
+        "projectLink": "https://open-hearts.vercel.app",
+        "ghLink": "https://github.com/shu-vro/open-hearts-next",
+        "color": "#1565c0"
+    },
+    {
+        "year": "2022",
+        "title": "Musika",
+        "description": "Browser music player: import local audio (ID3 tags read in-browser), build playlists stored in IndexedDB, stream songs from YouTube and fetch lyrics.",
+        "tags": [
+            "nextjs",
+            "typescript",
+            "react",
+            "mui",
+            "indexeddb",
+            "framer-motion"
+        ],
+        "imageUrl": "/project-images/musika.jpg",
+        "projectLink": "https://musika-mine.vercel.app/",
+        "ghLink": "https://github.com/shu-vro/Musika",
+        "color": "#a52a2a"
+    },
+    {
+        "year": "2022",
+        "title": "CrudMan",
+        "description": "Browser-based REST API client like Postman: send requests with params, headers, body and auth, inspect responses, run tests, use environments and generate code.",
+        "tags": ["nextjs", "react", "typescript", "sass", "monaco", "pwa"],
+        "imageUrl": "/project-images/crudman.jpg",
+        "projectLink": "https://crudman.netlify.app/",
+        "ghLink": "https://github.com/shu-vro/CrudMan",
+        "color": "#1e4fa8"
     },
     {
         "year": "2021",
-        "title": "Complete portfolio website",
-        "description": "\"COMPLETE-PORTFOLIO-WEBSITE\" is a comprehensive project for creating a portfolio website, utilizing HTML, CSS, and JavaScript. It showcases various web development techniques to build a visually appealing and functional personal portfolio.",
-        "tags": [
-            "vanilla",
-            "vite",
-            "HTML",
-            "CSS",
-            "JavaScript",
-            "Responsive Design",
-            "Portfolio",
-            "Web Development",
-            "UI/UX"
-        ],
-        "imageUrl": "/project-images/complete-portfolio-site.png",
+        "title": "Complete Portfolio Website",
+        "description": "Single-page portfolio in plain HTML, CSS and JavaScript with animated sections, a filterable project grid, testimonial slider, Mapbox map and EmailJS contact form.",
+        "tags": ["html", "css", "javascript", "vite", "mapbox", "emailjs"],
+        "imageUrl": "/project-images/complete-portfolio-website.jpg",
         "projectLink": "https://shu-vro.github.io/COMPLETE-PORTFOLIO-WEBSITE/",
         "ghLink": "https://github.com/shu-vro/COMPLETE-PORTFOLIO-WEBSITE",
-        "color": "#eb8133"
+        "color": "#2a3341"
     }
 ]

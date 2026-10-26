@@ -18,7 +18,7 @@ export default function Home() {
                 <Hero />
                 <AboutMe />
                 <TimelineBase />
-                <Projects />
+                <Projects limit={3} />
                 <SkillsSection />
                 <Contact />
                 <AnimationExit />

@@ -1,104 +1,47 @@
 [
     {
         "title": "2025",
-        "description": "Joined the Chorcha team as a Full Stack Developer, building cross-platform solutions and pioneering AI integration through RAG systems and intelligent agents",
+        "description": "Full Stack Developer at Chorcha, building cross-platform apps and AI features",
         "specs": [
-            "Developed end-to-end solutions spanning Android, web platforms, and API infrastructure",
-            "Architected robust backend systems to support diverse client applications",
-            "Created responsive frontends with modern frameworks for optimal user experience",
-            "Implemented Retrieval-Augmented Generation (RAG) systems to enhance information access",
-            "Designed autonomous AI agents to streamline operations and automate workflows",
-            "Collaborated with cross-functional teams to deliver cohesive product experiences",
-            "Applied machine learning techniques to solve complex business challenges",
-            "Optimized large language model implementations for production environments",
-            "Balanced technical innovation with practical business requirements"
+            "Shipped Android, web and API work end to end",
+            "Built RAG systems and AI agents for production",
+            "Optimized LLM usage for real workloads"
         ],
-        "tags": [
-            "#Chorcha",
-            "#FullStack",
-            "#AIEngineering",
-            "#MobileDev",
-            "#RAGSystems",
-            "#SoftwareArchitecture"
-        ]
+        "tags": ["#Chorcha", "#FullStack", "#AI", "#RAG"]
     },
     {
         "title": "2023",
-        "description": "Earned a place in the Computer Science and Engineering (CSE) department at Rajshahi University of Engineering & Technology (RUET), marking a significant milestone in my academic journey",
+        "description": "Admitted to CSE at Rajshahi University of Engineering & Technology (RUET)",
         "specs": [
-            "Secured admission through rigorous preparation and competitive exams",
-            "Stepped into a dynamic learning environment focused on computing and innovation",
-            "Strengthened problem-solving and analytical thinking skills",
-            "Gained exposure to core computer science concepts and engineering principles",
-            "Began collaborating with peers on projects and technical challenges",
-            "Laid the foundation for advanced studies in algorithms, software development, and AI",
-            "Opened doors to research, internships, and career opportunities in the tech industry",
-            "Started exploring artificial intelligence and machine learning"
+            "Studying algorithms, systems and software engineering",
+            "Started exploring AI and machine learning"
         ],
-        "tags": ["#RUET", "#CSE", "#EngineeringLife", "#AIAndML"]
+        "tags": ["#RUET", "#CSE", "#AI"]
     },
     {
         "title": "2022",
-        "description": "Achieved a CGPA of 5.00 out of 5.00, demonstrating strong academic performance",
+        "description": "HSC with GPA 5.00 out of 5.00",
         "specs": [
-            "Strengthened problem-solving and analytical thinking skills",
-            "Built a disciplined and goal-oriented mindset",
-            "Laid a solid foundation for higher education in computer science",
-            "Gained in-depth knowledge of mathematics, physics, and programming concepts",
-            "Developed a keen interest in technology and innovation",
-            "Enhanced time management and self-learning abilities",
-            "Prepared for competitive exams and future academic challenges"
+            "Strong base in mathematics, physics and programming"
         ],
-        "tags": ["#Mathematics", "#Physics", "#IT", "#Chemistry"]
+        "tags": ["#Mathematics", "#Physics", "#ICT"]
     },
     {
         "title": "2021",
-        "description": "Started actively developing web projects while diving into competitive programming",
+        "description": "Started building real web projects and competitive programming",
         "specs": [
-            "Built real-world projects, applying frontend and backend development skills",
-            "Learned and practiced Next.js, making it a core part of my tech stack",
-            "Gained experience with Vue, PHP, and MySQL, with MySQL remaining in use",
-            "Improved problem-solving abilities through competitive programming",
-            "Developed a deeper understanding of full-stack development principles",
-            "Built optimized and scalable web applications with best practices",
-            "Gained experience working with APIs, authentication, and databases",
-            "Learned how to debug efficiently and write cleaner, maintainable code",
-            "Improved coding speed and accuracy through regular competitive programming challenges",
-            "Started exploring advanced JavaScript concepts and performance optimization techniques",
-            "Strengthened logical reasoning and structured thinking through algorithmic problem-solving"
+            "Made Next.js and React my core stack",
+            "Worked with Vue, PHP and MySQL",
+            "Sharpened problem solving through contests"
         ],
-        "tags": [
-            "#WebDevelopment",
-            "#NextJS",
-            "#FullStack",
-            "#CompetitiveProgramming",
-            "#ProblemSolving",
-            "#AlgorithmDesign",
-            "#MySQL",
-            "#FrontendDevelopment",
-            "#BackendDevelopment",
-            "#APIs",
-            "#CleanCode",
-            "#ScalableApps",
-            "#Debugging",
-            "#CodeOptimization",
-            "#JavaScript",
-            "#ReactJS",
-            "#ProgrammingChallenges",
-            "#DatabaseManagement",
-            "#CSFundamentals"
-        ]
+        "tags": ["#NextJS", "#React", "#MySQL", "#CompetitiveProgramming"]
     },
     {
-        "title": "Early 2020",
-        "description": "Began my journey as a web developer, turning ideas into interactive digital experiences",
+        "title": "2020",
+        "description": "Began my journey as a web developer",
         "specs": [
-            "Explored HTML, CSS, and JavaScript fundamentals",
-            "Built my first projects, enhancing problem-solving skills",
-            "Developed a passion for creating dynamic and user-friendly web applications",
-            "Learned modern frameworks like React.js and Next.js",
-            "Gained experience in backend development with Node.js and databases"
+            "Learned HTML, CSS and JavaScript by building small projects"
         ],
-        "tags": ["#Programming", "#Web", "#React", "#Problem Solving"]
+        "tags": ["#HTML", "#CSS", "#JavaScript"]
     }
 ]
